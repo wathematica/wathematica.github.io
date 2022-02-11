@@ -1,0 +1,167 @@
+/* 文字組み */
+:root {
+  --text-color: #333;
+  --background-color: #fff;
+  --separator-color: #ddd;
+}
+
+html {
+  color: var(--text-color);
+  font-family: Inter, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+h2 {
+  padding: calc((3 - 1.75) * 0.5em) 0;
+  font-size: 1.6rem;
+  font-weight: normal;
+  text-align: justify;
+}
+
+h3 {
+  padding: calc((3 - 1.75) * 0.5em) 0;
+  font-size: 1.2rem;
+  font-weight: normal;
+  text-align: justify;
+}
+
+p {
+  text-indent: 1em;
+  text-align: justify;
+  overflow-wrap: break-word;
+}
+
+a:focus {
+  outline: solid 2px;
+}
+
+/* 版面 */
+:root {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+.page__header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.page__content {
+  width: 88%;
+  max-width: 1000px;
+  background-color: var(--background-color);
+  margin: 0 auto;
+}
+
+.page__footer {
+  position: relative;
+}
+
+/* ヘッダー */
+.header {
+  display: grid;
+  height: 6rem;
+  grid-template: 4rem 2rem / 100%;
+  grid-template-areas: "title" "navigation";
+  background-image: linear-gradient(#000b, #000b), url("/figure/background.webp");
+  background-size: cover;
+  background-position: center;
+}
+
+.header__title {
+  grid-area: title;
+  padding: 1.2rem;
+}
+
+.header__logo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.header__navigation {
+  grid-area: navigation;
+  align-self: center;
+}
+
+@media (min-width: 700px) {
+  :root {
+    scroll-padding-top: 5rem;
+  }
+
+  .header {
+    height: 5rem;
+    padding: 0 calc(max(50% - 550px, 0px) + 1.25rem);
+    grid-template: 5rem / 16rem 1fr auto;
+    grid-template-areas: "title . navigation";
+  }
+}
+
+/* ナビゲーション */
+.navigation {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.navigation__item {
+  flex: 1;
+  padding: 0 0.5rem;
+}
+
+.navigation__link {
+  display: block;
+  color: var(--background-color);
+  text-align: center;
+  text-decoration: none;
+}
+
+/* フッター */
+.footer {
+  height: 6rem;
+  background-image: linear-gradient(#000b, #000b), url("/figure/background.webp");
+  background-size: cover;
+  background-position: center;
+}
+
+.footer__snslist {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.footer__copyright {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+/* SNSリスト */
+.snslist {
+  display: flex;
+  list-style: none;
+}
+
+.snslist__item {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0 5px;
+}
+
+/* SNSアイコン */
+.snsicon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
+}

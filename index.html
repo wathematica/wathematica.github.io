@@ -1,19 +1,157 @@
 <!DOCTYPE html>
-<html lang="ja">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wathematica</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://unpkg.com/mvp.css">
-<style>
-body {
-  font-family: "Noto Sans JP", sans-serif;
-}
-</style>
-<header>
-  <h1>理工系学術サークルWathematica</h1>
-  <p>公式Webサイト鋭意制作中</p>
-  <p><a href="https://twitter.com/wathematica" target="_blank" rel="noreferrer"><b>Twitter &nearr;</b></a></p>
-</header>
+<html lang="ja" prefix="og: http://ogp.me/ns#">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Wathematicaは、早稲田大学の学生から構成される、理工系の学問に関する互助を目的としたサークルです。">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@wathematica">
+  <meta property="og:title" content="Wathematica">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://wathematica.github.io/">
+  <meta property="og:image" content="https://wathematica.github.io/figure/ogp.png">
+  <meta property="og:description" content="Wathematicaは、早稲田大学の学生から構成される、理工系の学問に関する互助を目的としたサークルです。">
+  <title>Wathematica</title>
+  <link rel="icon" href="/favicon.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./ress.css">
+  <link rel="stylesheet" href="./common.css">
+  <link rel="stylesheet" href="./index.css">
+  <!-- このWebサイトの情報は https://github.com/wathematica/wathematica.github.io/ に書かれています -->
+</head>
+<body>
+  <header class="header page__header">
+    <h1 class="header__title">
+      <a href="#">
+        <img class="header__logo" src="./figure/logo.svg" alt="Wathematica" width="250" height="32">
+      </a>
+    </h1>
+    <nav class="header__navigation">
+      <ul class="navigation">
+        <li class="navigation__item">
+          <a class="navigation__link" href="#">Home</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="#activity">Activity</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="#seminar">Seminar</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <img class="eyecatch" src="/figure/eyecatch.webp" alt="ゼミの様子" width="2000" height="1500">
+  <h2 class="catchphrase">知の前線へ。<wbr>僕らは一人じゃない。</h2>
+  <main class="page__content">
+    <div class="sectionlist__item">
+      <p>Wathematicaは、早稲田大学の学生から構成される、理工系の学問に関する互助を目的としたサークルです。60名を超える会員を有し、自主ゼミや発表会などを中心に活動しています。</p>
+      <p>Wathematicaには、学問に強く惹かれた会員が学部・学科を超えて所属しています。そのため、会員間で専門や興味の壁を越えて自分の関心事について話し、互いに刺激を与えあえる環境が生まれています。また、幅広い学年のメンバーが所属しているので、学習内容の難易度によらず、質問や相談が行いやすい環境でもあります。</p>
+      <p>学問に興味があるけどどうしていいか分からない方、より高みを仲間とともに目指したい方の入会をお待ちしています。</p>
+    </div>
+    <hr class="partition">
+    <article class="sectionlist__item">
+      <h2>新着情報</h2>
+      <ol class="newslist">
+        <li class="news newslist__item">
+          <time class="news__date" datetime="2022-02-10">2022年2月10日</time>
+          <span class="news__summary">Wathematica公式サイトを公開しました。</span>
+        </li>
+      </ol>
+    </article>
+    <section id="activity" class="sectionlist__item">
+      <h2>活動内容</h2>
+      <p>Wathematicaでは、各メンバーがゼミという小グループに分かれて活動しています。特に、参考書の内容に対する理解を協力して深めていく、輪読形式のゼミが多くあります。</p>
+      <p>ゼミの内容はとにかく自由。学びたいことがある人も、見つけられなくて悩んでる人も、ここでなら協力する仲間を見つけられるはずです。</p>
+      <p>毎月の定例会以外は全体での活動がないので、予定を自由に立てられます。会費もありません。興味があるかたはぜひ、お気軽にご連絡ください。</p>
+      <h3>自主ゼミとは？</h3>
+      <p>一人では読むのが難しい専門書を、複数人で協力して読み進めるものです。特に、担当箇所を分担してほかのメンバーに説明する「輪読」がよく行われます。詳しくは<a href="https://youtu.be/kpH1eY_Bv3s" target="_blank" rel="noreferrer">こちらの動画</a>をご覧ください。</p>
+    </section>
+    <section id="seminar" class="sectionlist__item">
+      <h2>ゼミ紹介</h2>
+      <p>この他にも<a href="./seminar.html">さまざまなゼミがあります</a>。</p>
+      <ul id="seminarlist" class="seminarlist">
+        <li class="seminar seminarlist__item">
+          <img class="seminar__thumbnail" src="./seminar/vector_algebra.webp" alt="佐武線型ゼミの画像" loading="lazy">
+          <div class="seminar__info">
+            <div class="seminar__name">佐武線型ゼミ</div>
+            <div class="seminar__detail">
+              <p>線型代数は「線型空間」という空間が持つ性質を調べていく分野です。抽象的な線型空間を調べるために、具体的な行列という道具を使って議論するのが特徴です。工学的にも応用が多く、さまざまな学部・学科・学年のメンバーとともに学習を進めています。</p>
+            </div>
+          </div>
+        </li>
+        <li class="seminar seminarlist__item">
+          <img class="seminar__thumbnail" src="./seminar/fluid_mechanics.webp" alt="流体力学ゼミの画像" loading="lazy">
+          <div class="seminar__info">
+            <div class="seminar__name">流体力学ゼミ</div>
+            <div class="seminar__detail">
+              <p>空気や水などをはじめとする、身近な存在でありながら扱うのが難しい「流体」について勉強しています。工学系の人と理学系の人が集まり、専門的な教科書の輪読をしています。</p>
+            </div>
+          </div>
+        </li>
+        <li class="seminar seminarlist__item">
+          <img class="seminar__thumbnail" src="./seminar/quantum_calculation.webp" alt="量子計算ゼミの画像" loading="lazy">
+          <div class="seminar__info">
+            <div class="seminar__name">量子計算ゼミ</div>
+            <div class="seminar__detail">
+              <p>量子計算とは、量子力学の原理を応用した量子コンピュータの理論を扱う分野です。従来のコンピューターでは莫大な時間がかかる計算を、高速で処理することが期待されています。</p>
+            </div>
+          </div>
+        </li>
+        <li class="seminar seminarlist__item">
+          <img class="seminar__thumbnail" src="./seminar/representation.webp" alt="表現論ゼミの画像" loading="lazy">
+          <div class="seminar__info">
+            <div class="seminar__name">表現論ゼミ</div>
+            <div class="seminar__detail">
+              <p>物理などで様々な応用がある表現論を勉強しています。はじめに有限群の表現論を扱い、最終的にはリー群・リー環の表現論を目指しています。数学専攻のB2, B3で集まり、洋書を輪読しています。</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section id="contact" class="section sectionlist__item">
+      <h2>ご連絡</h2>
+      <p>ご連絡はメール、もしくは<a href="https://twitter.com/wathematica" target="_blank" rel="noopener noreferrer">Twitterのダイレクトメッセージ</a>でお願いいたします。</p>
+      <p>メールアドレスはwat*****ica<wbr>@<wbr>gmail<wbr>.comです（wat*****icaは小文字のサークル名に置き換えてください）。</p>
+    </section>
+  </main>
+  <footer class="footer page__footer">
+    <ul class="snslist footer__snslist">
+      <li class="snslist__item">
+        <a href="https://twitter.com/wathematica" target="_blank" rel="noreferrer">
+          <img class="snsicon" src="./figure/twitter.svg" alt="Twitter">
+        </a>
+      </li>
+    </ul>
+    <small class="footer__copyright">© 2022 Wathematica</small>
+  </footer>
+  <script>
+    // 以下はゼミ紹介をランダムに選び出すJavaScriptです。
+    (() => {
+      "use strict";
+      const seminarList = document.getElementById("seminarlist");
+
+      if (!seminarList) {
+        return;
+      }
+
+      const children = seminarList.children;
+      const fragment = document.createDocumentFragment();
+
+      for (let i = 0; i < 4 && children.length > 0; i++) {
+        const rand = Math.floor(Math.random() * children.length);
+        fragment.appendChild(children[rand]);
+      }
+
+      seminarList.innerHTML = "";
+      seminarList.appendChild(fragment);
+    })();
+  </script>
+</body>
+</html>

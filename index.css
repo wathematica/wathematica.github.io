@@ -1,0 +1,108 @@
+.eyecatch {
+  display: block;
+  width: 100%;
+  height: calc((9 / 16) * 100vw);
+  max-height: 35vh;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.catchphrase {
+  padding-left: 0.75em; /* 句点を詰める代わり */
+  font-size: 1.8rem;
+  text-align: center;
+  word-break: keep-all;
+}
+
+.partition {
+  width: 20%;
+  height: 1px;
+  border: solid 1px var(--separator-color);
+  margin: 0 auto;
+}
+
+.sectionlist__item {
+  margin: 2rem 0;
+}
+
+.sectionlist__item:first-of-type {
+  margin-top: 0;
+}
+
+/* 新着情報 */
+.newslist {
+  max-height: 200px;
+  border: solid 1px var(--separator-color);
+  overflow-y: auto;
+  list-style: none;
+}
+
+.newslist__item {
+  margin: 0.5em;
+}
+
+.news {
+  padding-left: 1em;
+}
+
+.news__date {
+  display: inline-block;
+  text-indent: -1em;
+  margin-right: 1em;
+}
+
+.news__summary {
+  display: inline;
+  word-break: break-all;
+}
+
+/* ゼミ集 */
+.seminarlist {
+  display: flex;
+  list-style: none;
+  overflow-x: auto;
+}
+
+.seminarlist__item {
+  flex: none;
+  margin-right: 10px;
+}
+
+.seminarlist__item:last-of-type {
+  margin-right: 0;
+}
+
+/* ゼミ */
+.seminar {
+  width: 70vw;
+  max-width: 20rem;
+  border: solid 1px var(--separator-color);
+  border-radius: 5px;
+  overflow-x: hidden;
+}
+
+.seminar__thumbnail {
+  display: block;
+  width: 100%;
+  height: calc(min(70vw, 20rem) / 3);
+  border-bottom: solid 1px var(--separator-color);
+  object-fit: cover;
+  object-position: top center;
+}
+
+.seminar__info {
+  height: 18rem;
+  position: relative;
+  padding: 0 1em 1em 1em;
+  overflow-y: auto;
+  font-size: 0.95rem;
+}
+
+.seminar__name {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background: var(--background-color);
+  font-size: 1.2rem;
+  line-height: 3;
+}

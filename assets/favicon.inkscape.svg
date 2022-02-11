@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="180"
+   height="180"
+   viewBox="0 0 180 180"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="favicon.inkscape.svg"
+   inkscape:export-filename="C:\Users\iwana\calamari-dev\wathematica\favicon.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="1.1444445"
+     inkscape:cx="133.25243"
+     inkscape:cy="199.2233"
+     inkscape:window-width="1445"
+     inkscape:window-height="1000"
+     inkscape:window-x="204"
+     inkscape:window-y="140"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       aria-label="W"
+       id="text8422"
+       style="font-size:170px;line-height:1.25;font-family:'STIX Two Text';-inkscape-font-specification:'STIX Two Text';letter-spacing:0px;word-spacing:0px">
+      <path
+         d="m 126.465,151.68272 h -8.16 l -26.01,-69.359998 -2.38,-5.61 -5.61,-15.98 q -2.72,-7.31 -4.93,-10.71 -2.04,-3.57 -4.93,-4.42 -2.72,-1.02 -7.65,-1.02 v -5.78 h 47.09 v 5.78 q -12.75,0 -12.75,6.12 0,1.87 0.85,4.59 1.02,2.55 1.87,5.1 l 17.34,45.219998 5.1,15.81 h 1.02 l 18.7,-55.419998 q 0.68,-1.87 1.19,-4.25 0.68,-2.38 1.19,-4.93 0.51,-2.55 0.51,-4.59 0,-4.59 -3.06,-6.12 -2.89,-1.53 -8.5,-1.53 v -5.78 h 36.04 v 5.78 q -5.78,0.17 -8.84,2.72 -2.89,2.55 -5.27,9.01 z m -58.82,0 h -7.65 L 24.465,62.602722 q -3.91,-10.37 -7.65,-13.94 -3.74,-3.74 -10.2000002,-4.08 v -5.78 H 53.195 v 5.78 q -6.29,0 -8.67,1.36 -2.38,1.36 -2.38,4.08 0,3.23 2.21,9.01 l 19.55,48.789998 4.93,13.94 h 1.02 l 19.72,-50.659998 7.99,14.96 h -4.59 z"
+         style="font-weight:500;-inkscape-font-specification:'STIX Two Text Medium'"
+         id="path20700" />
+    </g>
+  </g>
+</svg>

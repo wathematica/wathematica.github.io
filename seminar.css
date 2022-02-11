@@ -1,0 +1,62 @@
+.seminarlist {
+  list-style: none;
+}
+
+.seminarlist__item {
+  margin-bottom: 10px;
+}
+
+.seminar {
+  padding: 15px;
+  border: solid 1px var(--separator-color);
+  border-radius: 5px;
+}
+
+.seminar__name {
+  margin-bottom: 0.5rem;
+}
+
+.seminar__gallery {
+  margin-top: 0.5em;
+}
+
+/* タグ集 */
+.taglist::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.taglist__item {
+  display: block;
+  float: left;
+  padding: 0 0.3em;
+  margin: 0.2em;
+  border: solid 1px;
+  border-radius: 0.4em;
+  font-size: 0.8rem;
+}
+
+/* ギャラリー */
+.gallery {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+}
+
+.gallery__item {
+  width: 200px;
+  height: 150px;
+  flex: 0 1 auto;
+  border: solid 1px var(--separator-color);
+  margin: 0.5em;
+}
+
+.gallery__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: var(--text-color);
+}
