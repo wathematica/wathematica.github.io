@@ -1,5 +1,6 @@
 /* 文字組み */
 :root {
+  --header-height: 6rem;
   --text-color: #333;
   --background-color: #fff;
   --separator-color: #ddd;
@@ -39,7 +40,7 @@ a:focus {
 /* 版面 */
 :root {
   scroll-behavior: smooth;
-  scroll-padding-top: 6rem;
+  scroll-padding-top: var(--header-height);
 }
 
 .page__header {
@@ -63,7 +64,7 @@ a:focus {
 /* ヘッダー */
 .header {
   display: grid;
-  height: 6rem;
+  height: var(--header-height);
   grid-template: 4rem 2rem / 100%;
   grid-template-areas: "title" "navigation";
   background-image: linear-gradient(#000b, #000b), url("/figure/background.webp");
@@ -91,11 +92,10 @@ a:focus {
 
 @media (min-width: 700px) {
   :root {
-    scroll-padding-top: 5rem;
+    --header-height: 5rem;
   }
 
   .header {
-    height: 5rem;
     padding: 0 calc(max(50% - 550px, 0px) + 1.25rem);
     grid-template: 5rem / 16rem 1fr auto;
     grid-template-areas: "title . navigation";
