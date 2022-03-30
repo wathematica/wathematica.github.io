@@ -8,7 +8,8 @@
 
 html {
   color: var(--text-color);
-  font-family: Inter, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  font-family: Inter, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo,
+    sans-serif;
   font-size: 16px;
   line-height: 1.75;
 }
@@ -67,7 +68,8 @@ a:focus {
   height: var(--header-height);
   grid-template: 4rem 2rem / 100%;
   grid-template-areas: "title" "navigation";
-  background-image: linear-gradient(#000b, #000b), url("/figure/background.webp");
+  background-image: linear-gradient(#000b, #000b),
+    url("/figure/background.webp"), linear-gradient(#333, #333);
   background-size: cover;
   background-position: center;
 }
@@ -124,7 +126,8 @@ a:focus {
 /* フッター */
 .footer {
   height: 6rem;
-  background-image: linear-gradient(#000b, #000b), url("/figure/background.webp");
+  background-image: linear-gradient(#000b, #000b),
+    url("/figure/background.webp"), linear-gradient(#333, #333);
   background-size: cover;
   background-position: center;
 }
