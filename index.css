@@ -1,11 +1,12 @@
 /* 告知（オプショナル） */
 .announcement {
   width: 100%;
-  height: 2rem;
+  padding: 0.3em 0;
   background: rgba(255, 255, 255, 0.85);
   position: absolute;
   top: var(--header-height);
-  line-height: 2rem;
+  overflow-wrap: break-word;
+  line-height: 1.6;
   text-align: center;
 }
 
@@ -28,7 +29,7 @@
 
 .partition {
   width: 20%;
-  height: 1px;
+  height: 0px;
   border: solid 1px var(--separator-color);
   margin: 0 auto;
 }
