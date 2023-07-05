@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="./ress.css">
   <link rel="stylesheet" href="./common.css">
   <link rel="stylesheet" href="./index.css">
+  <script defer src="./index.js"></script>
   <!-- このWebサイトの情報は https://github.com/wathematica/wathematica.github.io/ に書かれています -->
 </head>
 <body>
@@ -47,8 +48,7 @@
       </ul>
     </nav>
   </header>
-  <aside class="announcement"> 現在、新歓ゼミの募集を行っています。詳細は<a
-      href="https://twitter.com/wathematica/status/1641643513078222849">Twitter</a>から</aside>
+  <!-- <aside class="announcement">特別な告知はここに書く</aside> -->
   <img class="eyecatch" src="/figure/eyecatch.webp" alt="ゼミの様子" width="2000" height="1500">
   <h2 class="catchphrase">知の前線へ。<wbr>僕らは一人じゃない。</h2>
   <main class="page__content">
@@ -177,7 +177,7 @@
       <h2>ご連絡</h2>
       <p>ご連絡はメール、もしくは<a href="https://twitter.com/wathematica" target="_blank"
           rel="noopener noreferrer">Twitterのダイレクトメッセージ</a>でお願いいたします。</p>
-      <p>メールアドレスはwat*****ica<wbr>@<wbr>gmail<wbr>.comです（wat*****icaは小文字のサークル名に置き換えてください）。</p>
+      <p>メールアドレスはwat*****ica<wbr>@<wbr>gmail<wbr>.comです。wat*****icaは小文字のサークル名に置き換えてください。</p>
     </section>
   </main>
   <footer class="footer page__footer">
@@ -190,27 +190,5 @@
     </ul>
     <small class="footer__copyright">© 2022 Wathematica</small>
   </footer>
-  <script>
-    // 以下はゼミ紹介をランダムに選び出すJavaScriptです。
-    (() => {
-      "use strict";
-      const seminarList = document.getElementById("seminarlist");
-
-      if (!seminarList) {
-        return;
-      }
-
-      const children = seminarList.children;
-      const fragment = document.createDocumentFragment();
-
-      for (let i = 0; i < 4 && children.length > 0; i++) {
-        const rand = Math.floor(Math.random() * children.length);
-        fragment.appendChild(children[rand]);
-      }
-
-      seminarList.innerHTML = "";
-      seminarList.appendChild(fragment);
-    })();
-  </script>
 </body>
 </html>

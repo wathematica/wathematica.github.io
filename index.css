@@ -1,4 +1,4 @@
-/* 告知（オプショナル） */
+/* 告知 */
 .announcement {
   width: 100%;
   padding: 0.3em 0;
@@ -87,8 +87,8 @@
 
 /* ゼミ */
 .seminar {
-  width: 70vw;
-  max-width: 20rem;
+  width: 20rem;
+  max-width: 70vw;
   border: solid 1px var(--separator-color);
   border-radius: 5px;
   overflow-x: hidden;
@@ -97,25 +97,36 @@
 .seminar__thumbnail {
   display: block;
   width: 100%;
-  height: calc(min(70vw, 20rem) / 3);
+  height: calc(min(20rem, 70vw) / 3);
   border-bottom: solid 1px var(--separator-color);
   object-fit: cover;
   object-position: top center;
 }
 
 .seminar__info {
-  height: 18rem;
   position: relative;
   padding: 0 1em 1em 1em;
-  overflow-y: auto;
   font-size: 0.95rem;
 }
 
 .seminar__name {
+  background: var(--background-color);
   position: sticky;
   top: 0;
   left: 0;
-  background: var(--background-color);
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   font-size: 1.2rem;
   line-height: 3;
+}
+
+.seminar__detail {
+  display: -webkit-box;
+  min-height: calc(8 * 1.75em);
+  overflow: hidden;
+  line-height: 1.75;
+  line-clamp: 8;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 8;
 }

@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="./ress.css">
   <link rel="stylesheet" href="./common.css">
   <link rel="stylesheet" href="./seminar.css">
+  <script defer src="./seminar.js"></script>
   <!-- このWebサイトの情報は https://github.com/wathematica/wathematica.github.io/ に書かれています -->
 </head>
 <body>
@@ -170,33 +171,5 @@
     </ul>
     <small class="footer__copyright">© 2022 Wathematica</small>
   </footer>
-  <script>
-    // 以下はゼミを辞書順に整列させるJavaScriptです。
-    (() => {
-      "use strict";
-      const seminarList = document.getElementById("seminarlist");
-
-      if (!seminarList) {
-        return;
-      }
-
-      const intl = new Intl.Collator("ja-JP");
-      const children = Array.from(seminarList.children);
-
-      children.sort((x, y) => {
-        const a = x.dataset.ruby || "ん";
-        const b = y.dataset.ruby || "ん";
-        return intl.compare(a, b);
-      });
-
-      const fragment = document.createDocumentFragment();
-
-      for (const x of children) {
-        fragment.appendChild(x);
-      }
-
-      seminarList.appendChild(fragment);
-    })();
-  </script>
 </body>
 </html>
