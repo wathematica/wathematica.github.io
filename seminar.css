@@ -1,19 +1,19 @@
-.seminarlist {
-  list-style: none;
-}
+/* ゼミ */
 
 .seminarlist__item {
   margin-bottom: 10px;
 }
 
 .seminar {
-  padding: 15px;
   border: solid 1px var(--separator-color);
   border-radius: 5px;
+  padding: 15px;
 }
 
 .seminar__name {
+  font-size: 1rem;
   margin-bottom: 0.5rem;
+  padding: unset;
 }
 
 .seminar__gallery {
@@ -21,42 +21,44 @@
 }
 
 /* タグ集 */
+
 .taglist::after {
-  display: block;
-  content: "";
   clear: both;
+  content: "";
+  display: block;
 }
 
 .taglist__item {
-  display: block;
-  float: left;
-  padding: 0 0.3em;
-  margin: 0.2em;
   border: solid 1px;
   border-radius: 0.4em;
+  display: block;
+  float: left;
   font-size: 0.8rem;
+  margin: 0.2em;
+  padding: 0 0.3em;
 }
 
 /* ギャラリー */
+
 .gallery {
   display: flex;
-  width: 100%;
   flex-wrap: wrap;
   justify-content: center;
   list-style: none;
+  width: 100%;
 }
 
 .gallery__item {
-  width: 200px;
-  height: 150px;
-  flex: 0 1 auto;
   border: solid 1px var(--separator-color);
+  flex: 0 1 auto;
+  height: 150px;
   margin: 0.5em;
+  width: 200px;
 }
 
 .gallery__image {
-  width: 100%;
+  background: var(--text-color);
   height: 100%;
   object-fit: contain;
-  background: var(--text-color);
+  width: 100%;
 }

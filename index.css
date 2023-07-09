@@ -1,37 +1,39 @@
 /* 告知 */
+
 .announcement {
-  width: 100%;
-  padding: 0.3em 0;
   background: rgba(255, 255, 255, 0.85);
-  position: absolute;
-  top: var(--header-height);
-  overflow-wrap: break-word;
   line-height: 1.6;
+  overflow-wrap: break-word;
+  padding: 0.3em 0;
+  position: absolute;
   text-align: center;
+  top: var(--header-height);
+  width: 100%;
 }
 
 /* アイキャッチ */
+
 .eyecatch {
   display: block;
-  width: 100%;
   height: calc((9 / 16) * 100vw);
   max-height: 35vh;
   object-fit: cover;
   object-position: center center;
+  width: 100%;
 }
 
 .catchphrase {
-  padding-left: 0.75em; /* 句点を詰める代わり */
   font-size: 1.8rem;
+  padding-left: 0.75em; /* 句点を詰める代わり */
   text-align: center;
   word-break: keep-all;
 }
 
 .partition {
-  width: 20%;
-  height: 0px;
   border: solid 1px var(--separator-color);
+  height: 0px;
   margin: 0 auto;
+  width: 20%;
 }
 
 .sectionlist__item {
@@ -43,11 +45,12 @@
 }
 
 /* 新着情報 */
+
 .newslist {
-  max-height: 200px;
   border: solid 1px var(--separator-color);
-  overflow-y: auto;
   list-style: none;
+  max-height: 200px;
+  overflow-y: auto;
 }
 
 .newslist__item {
@@ -60,8 +63,8 @@
 
 .news__date {
   display: inline-block;
-  text-indent: -1em;
   margin-right: 1em;
+  text-indent: -1em;
 }
 
 .news__summary {
@@ -70,9 +73,9 @@
 }
 
 /* ゼミ集 */
+
 .seminarlist {
   display: flex;
-  list-style: none;
   overflow-x: auto;
 }
 
@@ -86,47 +89,50 @@
 }
 
 /* ゼミ */
+
 .seminar {
-  width: 20rem;
-  max-width: 70vw;
   border: solid 1px var(--separator-color);
   border-radius: 5px;
+  max-width: 70vw;
   overflow-x: hidden;
+  width: 20rem;
 }
 
 .seminar__thumbnail {
-  display: block;
-  width: 100%;
-  height: calc(min(20rem, 70vw) / 3);
   border-bottom: solid 1px var(--separator-color);
+  display: block;
+  height: calc(min(20rem, 70vw) / 3);
   object-fit: cover;
   object-position: top center;
+  width: 100%;
 }
 
 .seminar__info {
-  position: relative;
-  padding: 0 1em 1em 1em;
   font-size: 0.95rem;
+  padding: 0 1em 1em 1em;
+  position: relative;
 }
 
 .seminar__name {
   background: var(--background-color);
-  position: sticky;
-  top: 0;
-  left: 0;
-  overflow-x: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
   font-size: 1.2rem;
+  font-weight: normal;
+  left: 0;
   line-height: 3;
+  overflow-x: hidden;
+  padding: unset;
+  position: sticky;
+  text-overflow: ellipsis;
+  top: 0;
+  white-space: nowrap;
 }
 
 .seminar__detail {
-  display: -webkit-box;
-  min-height: calc(8 * 1.75em);
-  overflow: hidden;
-  line-height: 1.75;
-  line-clamp: 8;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 8;
+  display: -webkit-box;
+  line-clamp: 8;
+  line-height: 1.75;
+  min-height: calc(8 * 1.75em);
+  overflow: hidden;
 }

@@ -1,10 +1,14 @@
-/* 文字組み */
+/* カスタムプロパティ */
+
 :root {
-  --header-height: 6rem;
-  --text-color: #333;
   --background-color: #fff;
+  --footer-height: 6rem;
+  --header-height: 6rem;
   --separator-color: #ddd;
+  --text-color: #333;
 }
+
+/* 文字組み */
 
 html {
   color: var(--text-color);
@@ -15,23 +19,27 @@ html {
 }
 
 h2 {
-  padding: calc((3 - 1.75) * 0.5em) 0;
   font-size: 1.6rem;
   font-weight: normal;
+  padding: calc((3 - 1.75) * 0.5em) 0;
   text-align: justify;
 }
 
 h3 {
-  padding: calc((3 - 1.75) * 0.5em) 0;
   font-size: 1.2rem;
   font-weight: normal;
+  padding: calc((3 - 1.75) * 0.5em) 0;
   text-align: justify;
 }
 
 p {
-  text-indent: 1em;
-  text-align: justify;
   overflow-wrap: break-word;
+  text-align: justify;
+  text-indent: 1em;
+}
+
+address {
+  font-style: inherit;
 }
 
 a:focus {
@@ -39,23 +47,25 @@ a:focus {
 }
 
 /* 版面 */
+
 :root {
   scroll-behavior: smooth;
   scroll-padding-top: var(--header-height);
 }
 
 .page__header {
+  left: 0;
   position: sticky;
   top: 0;
-  left: 0;
   z-index: 1;
 }
 
 .page__content {
-  width: 88%;
-  max-width: 1000px;
   background-color: var(--background-color);
   margin: 0 auto;
+  max-width: 1000px;
+  min-height: calc(100vh - var(--header-height) - var(--footer-height));
+  width: 88%;
 }
 
 .page__footer {
@@ -63,15 +73,16 @@ a:focus {
 }
 
 /* ヘッダー */
+
 .header {
-  display: grid;
-  height: var(--header-height);
-  grid-template: 4rem 2rem / 100%;
-  grid-template-areas: "title" "navigation";
   background-image: linear-gradient(#000b, #000b),
     url("/figure/background.webp"), linear-gradient(#333, #333);
-  background-size: cover;
   background-position: center;
+  background-size: cover;
+  display: grid;
+  grid-template: 4rem 2rem / 100%;
+  grid-template-areas: "title" "navigation";
+  height: var(--header-height);
 }
 
 .header__title {
@@ -81,15 +92,15 @@ a:focus {
 
 .header__logo {
   display: block;
-  width: 100%;
   height: 100%;
   object-fit: contain;
   object-position: left center;
+  width: 100%;
 }
 
 .header__navigation {
-  grid-area: navigation;
   align-self: center;
+  grid-area: navigation;
 }
 
 @media (min-width: 700px) {
@@ -98,16 +109,17 @@ a:focus {
   }
 
   .header {
-    padding: 0 calc(max(50% - 550px, 0px) + 1.25rem);
     grid-template: 5rem / 16rem 1fr auto;
     grid-template-areas: "title . navigation";
+    padding: 0 calc(max(50% - 550px, 0px) + 1.25rem);
   }
 }
 
 /* ナビゲーション */
+
 .navigation {
-  display: flex;
   align-items: center;
+  display: flex;
   list-style: none;
 }
 
@@ -117,54 +129,57 @@ a:focus {
 }
 
 .navigation__link {
-  display: block;
   color: var(--background-color);
+  display: block;
   text-align: center;
   text-decoration: none;
 }
 
 /* フッター */
+
 .footer {
-  height: 6rem;
   background-image: linear-gradient(#000b, #000b),
     url("/figure/background.webp"), linear-gradient(#333, #333);
-  background-size: cover;
   background-position: center;
+  background-size: cover;
+  height: var(--footer-height);
 }
 
 .footer__snslist {
+  left: 50%;
   position: absolute;
   top: 35%;
-  left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .footer__copyright {
-  position: absolute;
-  top: 75%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   color: #fff;
   font-size: 0.95rem;
+  left: 50%;
+  position: absolute;
+  top: 75%;
+  transform: translate(-50%, -50%);
 }
 
 /* SNSリスト */
+
 .snslist {
   display: flex;
   list-style: none;
 }
 
 .snslist__item {
-  width: 1.5rem;
   height: 1.5rem;
   margin: 0 5px;
+  width: 1.5rem;
 }
 
 /* SNSアイコン */
+
 .snsicon {
   display: block;
-  width: 100%;
   height: 100%;
   object-fit: contain;
   object-position: center center;
+  width: 100%;
 }
