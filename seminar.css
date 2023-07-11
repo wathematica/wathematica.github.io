@@ -45,20 +45,15 @@
   flex-wrap: wrap;
   justify-content: center;
   list-style: none;
-  width: 100%;
 }
 
 .gallery__item {
   border: solid 1px var(--separator-color);
-  flex: 0 1 auto;
-  height: 150px;
   margin: 0.5em;
-  width: 200px;
 }
 
 .gallery__image {
   background: var(--text-color);
-  height: 100%;
+  display: block;
   object-fit: contain;
-  width: 100%;
 }
