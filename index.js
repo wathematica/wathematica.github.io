@@ -16,7 +16,7 @@
       fragment.appendChild(children[rand]);
     }
 
-    seminarList.innerHTML = "";
+    seminarList.replaceChildren();
     seminarList.appendChild(fragment);
   });
 })();

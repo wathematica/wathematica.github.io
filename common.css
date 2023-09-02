@@ -12,8 +12,7 @@
 
 html {
   color: var(--text-color);
-  font-family: Inter, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo,
-    sans-serif;
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
   font-size: 16px;
   line-height: 1.75;
 }
@@ -22,20 +21,21 @@ h2 {
   font-size: 1.6rem;
   font-weight: normal;
   padding: calc((3 - 1.75) * 0.5em) 0;
-  text-align: justify;
 }
 
 h3 {
   font-size: 1.2rem;
   font-weight: normal;
   padding: calc((3 - 1.75) * 0.5em) 0;
-  text-align: justify;
 }
 
 p {
   overflow-wrap: break-word;
-  text-align: justify;
-  text-indent: 1em;
+}
+
+p + p {
+  overflow-wrap: break-word;
+  margin-top: 1.5em;
 }
 
 address {
