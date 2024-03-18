@@ -17,7 +17,7 @@
 ## 要点
 
 + HTML/CSS/JSの言語機能を利用する基準は，サポートしているブラウザのシェアが[90％以上であるかどうか](https://caniuse.com/ciu/about)とした（ただしInternet Explorerはサポートしない）
-+ ロゴとファビコンのフォントは[STIX Two Text](https://www.stixfonts.org/)，Webサイト中の欧文は[Inter](https://fonts.google.com/specimen/Inter)を利用した
++ ロゴとファビコンのフォントは[STIX Two Text](https://www.stixfonts.org/)を利用した
 + CSSの命名規則は[MindBEMding](https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)を採用した
 + `/index.html`と`/seminar.html`にはJavaScriptが含まれている．`seminar.html`のJavaScriptを正常に動作させるには，各ゼミの`data-ruby`属性に読み仮名を指定する必要がある
 
@@ -77,7 +77,7 @@
 
 ## デザインに関して
 
-ロゴとファビコンのフォントは[STIX Two Text](https://www.stixfonts.org/)です（ロゴは[カーニング](https://ja.wikipedia.org/wiki/カーニング)されています）．[Inkscape](https://inkscape.org/)で編集可能なファイルが[`/assets/favicon.inkscape.svg`](./assets/favicon.inkscape.svg)と[`/assets/logo.inkscape.svg`](./assets/logo.inkscape.svg)にあります．また，Webサイト中の欧文は[Inter](https://fonts.google.com/specimen/Inter)というWebフォントを利用しています．
+ロゴとファビコンのフォントは[STIX Two Text](https://www.stixfonts.org/)です（ロゴは[カーニング](https://ja.wikipedia.org/wiki/カーニング)されています）．[Inkscape](https://inkscape.org/)で編集可能なファイルが[`/assets/favicon.inkscape.svg`](./assets/favicon.inkscape.svg)と[`/assets/logo.inkscape.svg`](./assets/logo.inkscape.svg)にあります．
 
 クラスの命名規則は[BEM](https://en.bem.info/methodology/)（正確には[MindBEMding](https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)）にしたがっています．
 
@@ -130,3 +130,4 @@ console.log(list);
 この文書の更新履歴です．
 
 + 2022年2月1日：初稿作成
++ 2024年3月18日：Webフォントの除去に応じて修正
