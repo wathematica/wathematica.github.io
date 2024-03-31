@@ -24,7 +24,7 @@
 
 .catchphrase {
   font-size: 1.8rem;
-  padding-left: 0.75em; /* 句点を詰める代わり */
+  padding-left: 0.75em; /* 行末の句点を詰める代わり */
   text-align: center;
   word-break: keep-all;
 }
