@@ -3,12 +3,12 @@
 ## 目次
 
 1. はじめに
-1. 要点
-1. Webサイトの構成
-1. HTMLに関して
-1. デザインに関して
-1. メモ
-1. 更新履歴
+2. 要点
+3. Webサイトの構成
+4. HTMLに関して
+5. デザインに関して
+6. メモ
+7. 更新履歴
 
 ## はじめに
 
@@ -16,10 +16,10 @@
 
 ## 要点
 
-+ HTML/CSS/JSの言語機能を利用する基準は，サポートしているブラウザのシェアが[90％以上であるかどうか](https://caniuse.com/ciu/about)とした（ただしInternet Explorerはサポートしない）
-+ ロゴとファビコンのフォントは[STIX Two Text](https://www.stixfonts.org/)を利用した
-+ CSSの命名規則は[MindBEMding](https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)を採用した
-+ `/index.html`と`/seminar.html`にはJavaScriptが含まれている．`seminar.html`のJavaScriptを正常に動作させるには，各ゼミの`data-ruby`属性に読み仮名を指定する必要がある
+- HTML/CSS/JSの言語機能を利用する基準は，サポートしているブラウザのシェアが[90％以上であるかどうか](https://caniuse.com/ciu/about)とした
+- ロゴとファビコンのフォントは[STIX Two Text](https://www.stixfonts.org/)を利用した
+- CSSの命名規則は[MindBEMding](https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)を採用した
+- `/index.html`と`/seminar.html`にはJavaScriptが含まれている．`seminar.html`のJavaScriptを正常に動作させるには，各ゼミの`data-ruby`属性に読み仮名を指定する必要がある
 
 ## Webサイトの構成
 
@@ -85,13 +85,9 @@
 
 ### アクセシビリティについて
 
-+ [JIS X 8341-3:2016 達成基準 早見表（レベルA & AA）](https://waic.jp/resource/jis-x-8341-3-2016/)と[WCAG 2.0 解説書](https://waic.jp/docs/UNDERSTANDING-WCAG20/Overview.html)に，アクセシビリティに関する注意事項が列記されています
-+ [Google ChromeのEmulate vision deficiencies](https://developer.chrome.com/blog/new-in-devtools-83/#vision-deficiencies)で色覚異常をシミュレーションできます
-+ [Lighthouse](https://developers.google.com/web/tools/lighthouse)でアクセシビリティを数値化できます
-
-### ファビコンがWikipediaと似ていることについて
-
-[東京高判平成8年1月25日 知的裁集28巻1号1頁](https://www.courts.go.jp/app/hanrei_jp/detail7?id=13816)によれば，文字のみからなるロゴマークには普通，著作権による保護は認められないと考えられます．
+- [JIS X 8341-3:2016 達成基準 早見表（レベルA & AA）](https://waic.jp/resource/jis-x-8341-3-2016/)と[WCAG 2.0 解説書](https://waic.jp/docs/UNDERSTANDING-WCAG20/Overview.html)に，アクセシビリティに関する注意事項が列記されています
+- [Google ChromeのEmulate vision deficiencies](https://developer.chrome.com/blog/new-in-devtools-83/#vision-deficiencies)で色覚異常をシミュレーションできます
+- [Lighthouse](https://developers.google.com/web/tools/lighthouse)でアクセシビリティを数値化できます
 
 ### 画像について
 
@@ -124,10 +120,3 @@ console.log(list);
 // desirable output: ["生田", "差", "生活", "奈", "生麦"]
 // real output     : ["差", "生活", "生田", "生麦", "奈"]
 ```
-
-## 更新履歴
-
-この文書の更新履歴です．
-
-+ 2022年2月1日：初稿作成
-+ 2024年3月18日：Webフォントの除去に応じて修正
