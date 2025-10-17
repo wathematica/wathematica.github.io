@@ -1,0 +1,21 @@
+.announcement {
+  background: #1a1a1a;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 1em;
+  border: 1px solid #444;
+  border-radius: 10px;
+  margin: 1.5em 0;
+}
+
+.announcement a {
+  color: #ff4d4d;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.announcement a:hover {
+  color: #fff;
+}
