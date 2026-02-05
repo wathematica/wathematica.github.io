@@ -1,0 +1,45 @@
+/* よくある質問 */
+
+.questionList__item {
+    margin-bottom: 10px;
+}
+
+.question {
+    border: solid 1px var(--text-color);
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.question__summary {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.question__summary::-webkit-details-marker {
+    display: none;
+}
+
+.question__content {
+    font-size: 1rem;
+    padding: unset;
+    margin: 0;
+}
+
+.question__toggle::after {
+    content: "+";
+    font-size: 1.4rem;
+}
+
+.question__detail[open] .question__toggle::after {
+    content: "-";
+    font-size: 1.4rem;
+}
+
+.question__answer {
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: solid 1px var(--separator-color);
+}
