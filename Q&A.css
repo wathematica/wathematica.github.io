@@ -31,6 +31,8 @@
 .question__toggle::after {
     content: "+";
     font-size: 1.4rem;
+    display: inline-block;
+    transition: transform 0.3s ease;
 }
 
 .question__detail[open] .question__toggle::after {
@@ -38,8 +40,26 @@
     font-size: 1.4rem;
 }
 
+.question__answer-wrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s ease-out;
+}
+
+.question__answer-wrapper.is-open {
+    grid-template-rows: 1fr;
+}
+
 .question__answer {
+    overflow: hidden;
+    margin-top: 0;
+    padding-top: 0;
+    border-top: solid 1px transparent;
+    transition: margin-top 0.3s ease-out, padding-top 0.3s ease-out, border-color 0.3s ease-out;
+}
+
+.question__answer-wrapper.is-open .question__answer {
     margin-top: 0.75rem;
     padding-top: 0.75rem;
-    border-top: solid 1px var(--separator-color);
+    border-top-color: var(--separator-color);
 }
