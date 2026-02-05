@@ -3,7 +3,7 @@
 :root {
   --background-color: #fff;
   --footer-height: 6rem;
-  --header-height: 6rem;
+  --header-height: 4rem;
   --separator-color: #ddd;
   --text-color: #333;
 }
@@ -33,7 +33,7 @@ p {
   overflow-wrap: break-word;
 }
 
-p + p {
+p+p {
   overflow-wrap: break-word;
   margin-top: 1.5em;
 }
@@ -80,8 +80,8 @@ a:focus {
   background-position: center;
   background-size: cover;
   display: grid;
-  grid-template: 4rem 2rem / 100%;
-  grid-template-areas: "title" "navigation";
+  grid-template: 4rem / 1fr auto;
+  grid-template-areas: "title hamburger";
   height: var(--header-height);
 }
 
@@ -98,10 +98,6 @@ a:focus {
   width: 100%;
 }
 
-.header__navigation {
-  align-self: center;
-  grid-area: navigation;
-}
 
 @media (min-width: 700px) {
   :root {
@@ -134,6 +130,68 @@ a:focus {
   text-align: center;
   text-decoration: none;
 }
+
+/* ハンバーガーボタン */
+.hamburger {
+  appearance: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  grid-area: hamburger;
+  align-self: center;
+  justify-self: end;
+  padding: 0.5rem;
+}
+
+.hamburger__line {
+  background: var(--background-color);
+  border-radius: 2px;
+  display: block;
+  height: 2px;
+  width: 24px;
+}
+
+/* モバイル時: ナビゲーションを非表示、ボタン表示 */
+.header__navigation {
+  display: none;
+}
+
+/* メニューが開いた時（.is-openクラスで制御） */
+.header__navigation.is-open {
+  display: block;
+  position: absolute;
+  top: var(--header-height);
+  left: 0;
+  width: 100%;
+  background: #000b;
+}
+
+.header__navigation.is-open .navigation {
+  flex-direction: column;
+}
+
+.header__navigation.is-open .navigation__item {
+  padding: 0.75rem 0;
+}
+
+/* PC時: ナビゲーション表示、ボタン非表示 */
+@media (min-width: 700px) {
+  .hamburger {
+    align-self: center;
+    grid-area: navigation;
+    display: none;
+  }
+
+  .header__navigation {
+    align-self: center;
+    grid-area: navigation;
+    display: block;
+  }
+}
+
 
 /* フッター */
 
