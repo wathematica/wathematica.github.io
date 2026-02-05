@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja" prefix="og: http://ogp.me/ns#">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -20,6 +21,7 @@
   <link rel="stylesheet" href="./index.css">
   <script defer src="./index.js"></script>
 </head>
+
 <body>
   <header class="header page__header">
     <h1 class="header__title">
@@ -36,7 +38,7 @@
           <a class="navigation__link" href="#activity">Activity</a>
         </li>
         <li class="navigation__item">
-          <a class="navigation__link" href="#seminar">Seminar</a>
+          <a class="navigation__link" href="./seminar.html">Seminar</a>
         </li>
         <li class="navigation__item">
           <a class="navigation__link" href="#contact">Contact</a>
@@ -44,8 +46,8 @@
       </ul>
     </nav>
   </header>
-   <aside class="announcement">理工展2025の特設ページは<a href="./events/2025/rikoten.html"
-              target="_blank" rel="noreferrer">こちら</a></aside>
+  <aside class="announcement">理工展2025の特設ページは<a href="./events/2025/rikoten.html" target="_blank"
+      rel="noreferrer">こちら</a></aside>
   <img class="eyecatch" src="/figure/eyecatch.webp" alt="ゼミの様子" width="2000" height="1500">
   <h2 class="catchphrase">知の前線へ。<wbr>僕らは一人じゃない。</h2>
   <main class="page__content">
@@ -61,9 +63,13 @@
       <h2>新着情報</h2>
       <ol class="newslist">
         <li class="news newslist__item">
+          <time class="news__date" datetime="">後できめる</time>
+          <span class="news__summary">サイトの改修を行いました</span>
+        </li>
+        <li class="news newslist__item">
           <time class="news__date" datetime="2025-10-25">2025年10月25日</time>
-          <span class="news__summary">今年度の理工展でポスター展示を行います。詳細は<a href="./events/2025/rikoten.html"
-              target="_blank" rel="noreferrer">こちら</a>。</span>
+          <span class="news__summary">今年度の理工展でポスター展示を行います。詳細は<a href="./events/2025/rikoten.html" target="_blank"
+              rel="noreferrer">こちら</a>。</span>
         </li>
         <li class="news newslist__item">
           <time class="news__date" datetime="2024-05-15">2024年5月15日</time>
@@ -119,84 +125,23 @@
       <p>ゼミの内容はとにかく自由。学びたいことがある人も、見つけられなくて悩んでる人も、ここでなら協力する仲間を見つけられるはずです。</p>
       <p>毎月の定例会以外は全体での活動がないので、予定を自由に立てられます。会費もありません。興味があるかたはぜひ、お気軽にご連絡ください。</p>
       <h3>自主ゼミとは？</h3>
-      <p>一人では読むのが難しい専門書を、複数人で協力して読み進めるものです。特に、担当箇所を分担してほかのメンバーに説明する「輪読」がよく行われます。詳しくは<a
-          href="https://youtu.be/kpH1eY_Bv3s" target="_blank" rel="noreferrer">こちらの動画</a>をご覧ください。</p>
+      <p>
+        自主ゼミは気になるテーマを学生同士で選び文献を輪読しながら議論する場です。
+        毎回担当者が要点をまとめて発表し、質問や意見交換で理解を深めます。
+        「一人だと読み切れない本を仲間と最後まで読む」ための仕組みとしても機能します。
+        <br />
+        より詳しく自主ゼミについて知りたい方は以下の動画をご覧ください。
+      </p>
+      <iframe src="https://www.youtube.com/embed/kpH1eY_Bv3s?si=iAVajSO7DRzf11my" title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </section>
-    <section id="seminar" class="sectionlist__item">
-      <h2>ゼミ紹介</h2>
-      <p>この他にも<a href="./seminar.html">さまざまなゼミがあります</a>。</p>
-      <div id="seminarlist" class="seminarlist">
-        <article class="seminar seminarlist__item">
-          <img class="seminar__thumbnail" src="./figure/math.webp" alt="青雪江ゼミの画像" loading="lazy">
-          <div class="seminar__info">
-            <h3 class="seminar__name">青雪江ゼミ</h3>
-            <div class="seminar__detail">
-              <p>雪江明彦『代数学2環と体とガロア理論』を去年の夏から読み進めています。今年の夏休みからはこの本の最終章（ガロア理論）を読み、方程式の可解性などに関する理解を目指します。</p>
-            </div>
-          </div>
-        </article>
-        <article class="seminar seminarlist__item">
-          <img class="seminar__thumbnail" src="./figure/math.webp" alt="アクチュアリー数学ゼミの画像" loading="lazy">
-          <div class="seminar__info">
-            <h3 class="seminar__name">アクチュアリー数学ゼミ</h3>
-            <div class="seminar__detail">
-              <p>
-                アクチュアリー試験を目標の一つとしたゼミです。この資格試験は、確率統計を用いて保険業等の数理的側面を担うアクチュアリー職への登竜門になります。資格を目指すと同時に、確率・統計の応用的な部分を学ぶことができるゼミです。
-              </p>
-            </div>
-          </div>
-        </article>
-        <article class="seminar seminarlist__item">
-          <img class="seminar__thumbnail" src="./seminar/competitive_programming.webp" alt="蟻本ゼミの画像" loading="lazy">
-          <div class="seminar__info">
-            <h3 class="seminar__name">蟻本ゼミ</h3>
-            <div class="seminar__detail">
-              <p>
-                AtCoderという競技プログラミングのサイトを利用して、アルゴリズムの勉強会をしています。バーチャルコンテストをやったり、各自問題を解いてきて解説したりしています。「蟻本」ゼミという名前なのは、昨年度は「蟻本」と呼ばれる参考書を使用してゼミを行っていたからです。
-              </p>
-            </div>
-          </div>
-        </article>
-        <article class="seminar seminarlist__item">
-          <img class="seminar__thumbnail" src="./seminar/functional_analysis.webp" alt="関数解析ゼミの画像" loading="lazy">
-          <div class="seminar__info">
-            <h3 class="seminar__name">関数解析ゼミ</h3>
-            <div class="seminar__detail">
-              <p>関数解析とはいわば無限次元の線形代数であり、さまざまな関数空間や線形作用素の性質を学びます。偏微分方程式や確率論、さらには量子力学など多くの応用があります。</p>
-            </div>
-          </div>
-        </article>
-        <article class="seminar seminarlist__item">
-          <img class="seminar__thumbnail" src="./seminar/gauge_theory.webp" alt="ゲージ理論ゼミの画像" loading="lazy">
-          <div class="seminar__info">
-            <h3 class="seminar__name">ゲージ理論ゼミ</h3>
-            <div class="seminar__detail">
-              <p>
-                ゲージ理論は数学と物理の両方の側面がある分野です。物理で出てくるゲージ場などを幾何学的に定式化し、ゲージ理論を数学的に理解することを目指しています。参加者は物理専攻と数学専攻からなり、分野間の交流も図っています。
-              </p>
-            </div>
-          </div>
-        </article>
-        <article class="seminar seminarlist__item">
-          <img class="seminar__thumbnail" src="./seminar/tu_manifold_whiteboard.webp" alt="トゥー多様体ゼミの画像" loading="lazy">
-          <div class="seminar__info">
-            <h3 class="seminar__name">トゥー多様体ゼミ</h3>
-            <div class="seminar__detail">
-              <p>Loring W. Tu「トゥー多様体」を読んでいます。一般化ストークスの定理を目標に読み進めています。</p>
-            </div>
-          </div>
-        </article>
-        <article class="seminar seminarlist__item">
-          <img class="seminar__thumbnail" src="./figure/math.webp" alt="量子力学関数解析ゼミの画像" loading="lazy">
-          <div class="seminar__info">
-            <h3 class="seminar__name">量子力学関数解析ゼミ</h3>
-            <div class="seminar__detail">
-              <p>量子力学を函数解析の立場から眺めるゼミです。ヒルベルト空間を導入してその空間自体やそれ上の（量子力学では物理量に対応する）線形演算子の性質を学びます。物理専攻と数学専攻の交流がさかんです。</p>
-            </div>
-          </div>
-        </article>
-      </div>
+    <section id="daily_life" class="">
+      <h2>普段の活動</h2>
+
     </section>
+
     <section id="contact" class="section sectionlist__item">
       <h2>ご連絡</h2>
       <address>
@@ -206,6 +151,7 @@
       </address>
     </section>
   </main>
+  <a href="#" class="float-banner">新歓の告知はこちら</a>
   <footer class="footer page__footer">
     <ul class="snslist footer__snslist">
       <li class="snslist__item">
@@ -222,4 +168,5 @@
     <small class="footer__copyright">© 2022 Wathematica</small>
   </footer>
 </body>
+
 </html>
