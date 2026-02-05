@@ -154,26 +154,28 @@ a:focus {
   width: 24px;
 }
 
-/* モバイル時: ナビゲーションを非表示、ボタン表示 */
+/* モバイル時: ナビゲーションを非表示（スライドアニメーション） */
 .header__navigation {
-  display: none;
-}
-
-/* メニューが開いた時（.is-openクラスで制御） */
-.header__navigation.is-open {
-  display: block;
   position: absolute;
   top: var(--header-height);
   left: 0;
   width: 100%;
   background: #000b;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
 }
 
-.header__navigation.is-open .navigation {
+/* メニューが開いた時（.is-openクラスで制御） */
+.header__navigation.is-open {
+  max-height: 300px;
+}
+
+.header__navigation .navigation {
   flex-direction: column;
 }
 
-.header__navigation.is-open .navigation__item {
+.header__navigation .navigation__item {
   padding: 0.75rem 0;
 }
 
@@ -188,7 +190,20 @@ a:focus {
   .header__navigation {
     align-self: center;
     grid-area: navigation;
-    display: block;
+    position: static;
+    max-height: none;
+    overflow: visible;
+    background: none;
+    transition: none;
+    width: auto;
+  }
+
+  .header__navigation .navigation {
+    flex-direction: row;
+  }
+
+  .header__navigation .navigation__item {
+    padding: 0 0.5rem;
   }
 }
 
