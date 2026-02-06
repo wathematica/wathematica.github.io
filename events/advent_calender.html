@@ -4,15 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="description" content="理工系学術サークル「Wathematica」のゼミ紹介です。">
+    <meta name="description" content="理工系学術サークル「Wathematica」のアドベントカレンダーです。">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@wathematica">
-    <meta property="og:title" content="ゼミ紹介 | Wathematica">
+    <meta property="og:title" content="アドベントカレンダー | Wathematica">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://wathematica.github.io/">
+    <meta property="og:url" content="https://wathematica.github.io/events/advent_calender.html">
     <meta property="og:image" content="https://wathematica.github.io/figure/ogp.png">
-    <meta property="og:description" content="理工系学術サークル「Wathematica」のゼミ紹介です。">
-    <title>ゼミ紹介 | Wathematica</title>
+    <meta property="og:description" content="理工系学術サークル「Wathematica」のアドベントカレンダーです。">
+    <title>アドベントカレンダー | Wathematica</title>
     <link rel="icon" href="/favicon.png">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png">
@@ -22,8 +22,8 @@
     <link rel="stylesheet" href="../ress.css">
     <link rel="stylesheet" href="../common.css">
     <link rel="stylesheet" href="./camp.css">
+    <link rel="stylesheet" href="./advent_calender.css">
     <script defer src="../index.js"></script>
-    <script defer src="./camp.js"></script>
 </head>
 
 <body>
@@ -59,47 +59,31 @@
         </nav>
     </header>
     <main class="page__content">
-        <!-- スワイプギャラリー -->
-        <section class="gallery">
-            <div class="gallery__container">
-                <div class="gallery__slide">
-                    <img src="../seminar/competitive_programming.webp" alt="合宿の様子1" class="gallery__image">
-                </div>
-                <div class="gallery__slide">
-                    <img src="../seminar/functional_analysis.webp" alt="合宿の様子2" class="gallery__image">
-                </div>
-                <div class="gallery__slide">
-                    <img src="../seminar/tu_manifold_text.webp" alt="合宿の様子3" class="gallery__image">
-                </div>
-            </div>
-            <div class="gallery__indicators">
-                <span class="gallery__dot"></span>
-                <span class="gallery__dot"></span>
-                <span class="gallery__dot"></span>
-            </div>
-        </section>
-
-        <!-- 概要 -->
-        <section class="section" id="overview">
-            <h2 class="section__title">概要</h2>
+        <!-- アドベントカレンダーについて -->
+        <section class="section" id="about">
+            <h2 class="section__title">アドベントカレンダーとは</h2>
             <p class="section__text">
-                <!-- 概要の内容をここに記載 -->
+                アドベントカレンダーは、12月1日から25日までの期間に毎日1つずつ記事を公開していく企画です。
+                Wathematicaでは、部員がそれぞれの興味ある数学・物理・化学などのテーマについて記事を執筆し、日替わりで公開しています。
             </p>
         </section>
 
-        <!-- 過去のゼミ -->
-        <section class="section" id="past-seminars">
-            <h2 class="section__title">過去のゼミ</h2>
-            <div class="section__content">
-                <!-- 過去のゼミの内容をここに記載 -->
-            </div>
-        </section>
-
-        <!-- 夜ゼミ -->
-        <section class="section" id="night-seminar">
-            <h2 class="section__title">夜ゼミ</h2>
-            <div class="section__content">
-                <!-- 夜ゼミの内容をここに記載 -->
+        <!-- 過去のアドベントカレンダー -->
+        <section class="section" id="past">
+            <h2 class="section__title">過去のアドベントカレンダー</h2>
+            <div class="advent-links">
+                <a class="advent-links__card" href="#" target="_blank" rel="noreferrer">
+                    <span class="advent-links__year">2025</span>
+                    <span class="advent-links__label">アドベントカレンダー 2025</span>
+                </a>
+                <a class="advent-links__card" href="#" target="_blank" rel="noreferrer">
+                    <span class="advent-links__year">2024</span>
+                    <span class="advent-links__label">アドベントカレンダー 2024</span>
+                </a>
+                <a class="advent-links__card" href="#" target="_blank" rel="noreferrer">
+                    <span class="advent-links__year">2023</span>
+                    <span class="advent-links__label">アドベントカレンダー 2023</span>
+                </a>
             </div>
         </section>
     </main>
