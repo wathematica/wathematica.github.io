@@ -45,24 +45,21 @@
 }
 
 .gallery__indicators {
-  bottom: 1rem;
   display: flex;
   gap: 0.5rem;
   justify-content: center;
-  left: 50%;
-  position: absolute;
-  transform: translateX(-50%);
+  margin-top: 1rem;
 }
 
 .gallery__dot {
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(0, 0, 0, 0.3);
   border-radius: 50%;
   height: 0.5rem;
   width: 0.5rem;
 }
 
 .gallery__dot.is-active {
-  background: #fff;
+  background: rgba(0, 0, 0, 0.7);
 }
 
 /* セクション */
