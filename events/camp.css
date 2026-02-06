@@ -1,0 +1,87 @@
+/* スワイプギャラリー */
+.gallery {
+  margin: 2rem 0;
+  position: relative;
+}
+
+.gallery__container {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 0 10%;
+  scroll-padding: 0 10%;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.gallery__container::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery__slide {
+  flex: 0 0 80%;
+  scroll-snap-align: center;
+}
+
+.gallery__image {
+  aspect-ratio: 16 / 9;
+  border-radius: 0.5rem;
+  display: block;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* PC時はさらにコンパクトに */
+@media (min-width: 700px) {
+  .gallery__container {
+    padding: 0 25%;
+    scroll-padding: 0 25%;
+  }
+
+  .gallery__slide {
+    flex: 0 0 50%;
+  }
+}
+
+.gallery__indicators {
+  bottom: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+.gallery__dot {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  height: 0.5rem;
+  width: 0.5rem;
+}
+
+.gallery__dot.is-active {
+  background: #fff;
+}
+
+/* セクション */
+.section {
+  padding: 2rem 0;
+}
+
+.section__title {
+  border-bottom: 1px solid var(--separator-color);
+  font-size: 1.6rem;
+  font-weight: normal;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.section__text {
+  line-height: 1.8;
+}
+
+.section__content {
+  line-height: 1.8;
+}
