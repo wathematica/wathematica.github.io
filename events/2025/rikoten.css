@@ -1,7 +1,7 @@
 :root {
-  --rikoten-primary-color: #FF184E;
-  --rikoten-secondary-color: #151F3B;
-  --rikoten-accent-color: #1BD3CE;
+  --rikoten-primary-color: #000000;
+  --rikoten-secondary-color: #000000;
+  --rikoten-accent-color: #000000;
 }
 
 .page__content {
@@ -58,7 +58,11 @@ h3 {
 }
 
 /* ポスター */
-
+#posterlist {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* 幅400px以上の列を自動で作る */
+  gap: 40px; /* アイテム間の隙間 */
+}
 .posterlist__item {
   margin-bottom: 10px;
 }
@@ -71,7 +75,7 @@ h3 {
 
 .poster__name {
   color: var(--rikoten-secondary-color);
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
   padding: unset;
@@ -83,4 +87,35 @@ h3 {
 
 .datelist {
   padding-left: 2em;
+}
+/* サムネイル画像を囲む枠 */
+.poster__thumbnail-container {
+  margin-top: 1rem;
+  text-align: center; /* 画像を中央寄せ */
+}
+
+/* 画像自体のスタイル */
+.poster__thumbnail {
+  width: 100%;        /* 親要素に合わせてリサイズ */
+  max-width: 350px;   /* 最大幅を制限（大きすぎないように） */
+  height: auto;
+  border: 1px solid #ddd;       /* 薄い枠線 */
+  box-shadow: 2px 4px 8px rgba(0,0,0,0.15); /* 影をつけて浮いているように見せる */
+  transition: transform 0.2s ease, opacity 0.2s ease; /* 動きの設定 */
+}
+
+/* リンクテキスト（「ポスターを見る」）の見た目調整 */
+.poster__link-text {
+  display: block;
+  margin-top: 0.5rem;
+  color: #0056b3; /* リンク色 */
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/* マウスを乗せたとき（ホバー時）の動き */
+.poster__thumbnail-container a:hover .poster__thumbnail {
+  transform: scale(1.03); /* 少し拡大 */
+  opacity: 0.8;           /* 少し薄く */
+  box-shadow: 4px 8px 12px rgba(0,0,0,0.2); /* 影を濃くする */
 }
