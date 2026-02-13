@@ -119,3 +119,8 @@ h3 {
   opacity: 0.8;           /* 少し薄く */
   box-shadow: 4px 8px 12px rgba(0,0,0,0.2); /* 影を濃くする */
 }
+/* 下線部の設定*/
+.underline {
+  text-decoration: solid 7px #0000;
+
+}
