@@ -18,9 +18,14 @@ html {
 }
 
 h2 {
+  border-bottom: 3px solid var(--separator-color);
   font-size: 1.6rem;
   font-weight: normal;
+  margin: 0 auto;
   padding: calc((3 - 1.75) * 0.5em) 0;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  width: fit-content;
 }
 
 h3 {

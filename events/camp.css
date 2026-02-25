@@ -55,6 +55,12 @@
   background: rgba(0, 0, 0, 0.7);
 }
 
+/* ページタイトル */
+
+.page__title {
+  border-bottom: none;
+}
+
 /* セクション */
 
 .section {

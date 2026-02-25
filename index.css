@@ -82,6 +82,7 @@
 }
 
 .catchphrase {
+  border-bottom: none;
   font-family: "Noto Serif JP", serif;
   font-size: 2em;
   font-weight: bold;
