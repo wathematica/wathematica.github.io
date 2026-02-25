@@ -1,16 +1,16 @@
-/* 全幅スライドショー */
+/* スワイプギャラリー */
+
 .gallery {
-  margin: 0;
-  overflow: hidden;
+  margin: 0 0 2rem;
   position: relative;
-  width: 100%;
 }
 
 .gallery__container {
   display: flex;
+  gap: 1rem;
   overflow-x: auto;
-  padding: 0;
-  scroll-padding: 0;
+  padding: 0 10%;
+  scroll-padding: 0 10%;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
@@ -21,41 +21,49 @@
 }
 
 .gallery__slide {
-  flex: 0 0 100%;
-  scroll-snap-align: start;
+  flex: 0 0 80%;
+  scroll-snap-align: center;
 }
 
 .gallery__image {
-  border-radius: 0;
+  aspect-ratio: 16 / 9;
+  border-radius: 0.5rem;
   display: block;
-  height: 56vw;
-  max-height: 300px;
   object-fit: cover;
   width: 100%;
 }
 
+@media (min-width: 700px) {
+  .gallery__container {
+    padding: 0 25%;
+    scroll-padding: 0 25%;
+  }
+
+  .gallery__slide {
+    flex: 0 0 50%;
+  }
+}
+
 .gallery__indicators {
-  bottom: 1rem;
   display: flex;
   gap: 0.5rem;
   justify-content: center;
-  left: 50%;
-  position: absolute;
-  transform: translateX(-50%);
+  margin-top: 1rem;
 }
 
 .gallery__dot {
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(0, 0, 0, 0.3);
   border-radius: 50%;
   height: 0.5rem;
   width: 0.5rem;
 }
 
 .gallery__dot.is-active {
-  background: #fff;
+  background: rgba(0, 0, 0, 0.7);
 }
 
 /* セクション */
+
 .section {
   padding: 2rem 0;
 }

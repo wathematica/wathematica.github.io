@@ -82,7 +82,11 @@
 }
 
 .catchphrase {
-  font-size: 1.8rem;
+  font-family: "Noto Serif JP", serif;
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   padding-left: 0.75em;
   /* 行末の句点を詰める代わり */
   text-align: center;
@@ -98,6 +102,25 @@
 
 .sectionlist__item {
   margin: 2rem 0;
+}
+
+.sectionlist__item h2 {
+  display: inline-block;
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.1em 1em;
+  text-align: center;
+}
+
+.sectionlist__item {
+  text-align: center;
+}
+
+.sectionlist__item p,
+.sectionlist__item address,
+.sectionlist__item ol {
+  text-align: left;
 }
 
 .sectionlist__item:first-of-type {

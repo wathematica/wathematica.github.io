@@ -8,48 +8,50 @@
     if (!container || dots.length === 0) return;
 
     const slides = container.querySelectorAll(".gallery__slide");
-    let currentIndex = 0;
     let autoplayTimer = null;
 
-    // 初期状態で最初のドットをアクティブに
     dots[0].classList.add("is-active");
 
-    // 現在のスライドインデックスを取得
-    function getCurrentIndex() {
-      const scrollLeft = container.scrollLeft;
-      const slideWidth = container.offsetWidth;
-      return Math.round(scrollLeft / slideWidth);
+    function getClosestIndex() {
+      const containerCenter = container.scrollLeft + container.offsetWidth / 2;
+      let closestIndex = 0;
+      let closestDistance = Infinity;
+
+      slides.forEach((slide, index) => {
+        const slideCenter = slide.offsetLeft + slide.offsetWidth / 2;
+        const distance = Math.abs(containerCenter - slideCenter);
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          closestIndex = index;
+        }
+      });
+
+      return closestIndex;
     }
 
-    // ドットの更新
     function updateDots(index) {
       dots.forEach((dot, i) => {
         dot.classList.toggle("is-active", i === index);
       });
     }
 
-    // 指定インデックスにスクロール
     function goToSlide(index) {
-      container.scrollTo({
-        left: index * container.offsetWidth,
-        behavior: "smooth",
-      });
+      const target = slides[index];
+      const scrollLeft =
+        target.offsetLeft - (container.offsetWidth - target.offsetWidth) / 2;
+      container.scrollTo({ left: scrollLeft, behavior: "smooth" });
     }
 
-    // 次のスライドへ
     function nextSlide() {
-      currentIndex = getCurrentIndex();
-      const next = (currentIndex + 1) % slides.length;
-      goToSlide(next);
+      const current = getClosestIndex();
+      goToSlide((current + 1) % slides.length);
     }
 
-    // 自動再生の開始
     function startAutoplay() {
       stopAutoplay();
       autoplayTimer = setInterval(nextSlide, 5000);
     }
 
-    // 自動再生の停止
     function stopAutoplay() {
       if (autoplayTimer) {
         clearInterval(autoplayTimer);
@@ -57,13 +59,10 @@
       }
     }
 
-    // スクロール時にドットを更新
     container.addEventListener("scroll", () => {
-      currentIndex = getCurrentIndex();
-      updateDots(currentIndex);
+      updateDots(getClosestIndex());
     });
 
-    // ユーザー操作時にタイマーをリセット
     container.addEventListener("pointerdown", () => {
       stopAutoplay();
     });
@@ -72,7 +71,6 @@
       startAutoplay();
     });
 
-    // 自動再生を開始
     startAutoplay();
   });
 })();
