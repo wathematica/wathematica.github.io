@@ -7,28 +7,72 @@
 
     if (!container || dots.length === 0) return;
 
+    const slides = container.querySelectorAll(".gallery__slide");
+    let currentIndex = 0;
+    let autoplayTimer = null;
+
     // 初期状態で最初のドットをアクティブに
     dots[0].classList.add("is-active");
 
+    // 現在のスライドインデックスを取得
+    function getCurrentIndex() {
+      const scrollLeft = container.scrollLeft;
+      const slideWidth = container.offsetWidth;
+      return Math.round(scrollLeft / slideWidth);
+    }
+
+    // ドットの更新
+    function updateDots(index) {
+      dots.forEach((dot, i) => {
+        dot.classList.toggle("is-active", i === index);
+      });
+    }
+
+    // 指定インデックスにスクロール
+    function goToSlide(index) {
+      container.scrollTo({
+        left: index * container.offsetWidth,
+        behavior: "smooth",
+      });
+    }
+
+    // 次のスライドへ
+    function nextSlide() {
+      currentIndex = getCurrentIndex();
+      const next = (currentIndex + 1) % slides.length;
+      goToSlide(next);
+    }
+
+    // 自動再生の開始
+    function startAutoplay() {
+      stopAutoplay();
+      autoplayTimer = setInterval(nextSlide, 5000);
+    }
+
+    // 自動再生の停止
+    function stopAutoplay() {
+      if (autoplayTimer) {
+        clearInterval(autoplayTimer);
+        autoplayTimer = null;
+      }
+    }
+
+    // スクロール時にドットを更新
     container.addEventListener("scroll", () => {
-      const slides = container.querySelectorAll(".gallery__slide");
-      const containerCenter = container.scrollLeft + container.offsetWidth / 2;
-
-      let closestIndex = 0;
-      let closestDistance = Infinity;
-
-      slides.forEach((slide, index) => {
-        const slideCenter = slide.offsetLeft + slide.offsetWidth / 2;
-        const distance = Math.abs(containerCenter - slideCenter);
-        if (distance < closestDistance) {
-          closestDistance = distance;
-          closestIndex = index;
-        }
-      });
-
-      dots.forEach((dot, index) => {
-        dot.classList.toggle("is-active", index === closestIndex);
-      });
+      currentIndex = getCurrentIndex();
+      updateDots(currentIndex);
     });
+
+    // ユーザー操作時にタイマーをリセット
+    container.addEventListener("pointerdown", () => {
+      stopAutoplay();
+    });
+
+    container.addEventListener("pointerup", () => {
+      startAutoplay();
+    });
+
+    // 自動再生を開始
+    startAutoplay();
   });
 })();

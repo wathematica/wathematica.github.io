@@ -1,3 +1,60 @@
+/* 全幅スライドショー */
+.gallery {
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.gallery__container {
+  display: flex;
+  overflow-x: auto;
+  padding: 0;
+  scroll-padding: 0;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.gallery__container::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery__slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+}
+
+.gallery__image {
+  border-radius: 0;
+  display: block;
+  height: 56vw;
+  max-height: 400px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.gallery__indicators {
+  bottom: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+.gallery__dot {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  height: 0.5rem;
+  width: 0.5rem;
+}
+
+.gallery__dot.is-active {
+  background: #fff;
+}
+
 /* セクション */
 .section {
   padding: 2rem 0;
