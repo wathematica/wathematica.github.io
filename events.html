@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="ja" prefix="og: http://ogp.me/ns#">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="理工系学術サークル「Wathematica」の過去ゼミ一覧です。">
+  <meta name="description" content="理工系学術サークル「Wathematica」のイベント一覧です。">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@wathematica">
-  <meta property="og:title" content="過去ゼミ一覧 | Wathematica">
+  <meta property="og:title" content="イベント一覧 | Wathematica">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://wathematica.github.io/">
+  <meta property="og:url" content="https://wathematica.github.io/events.html">
   <meta property="og:image" content="https://wathematica.github.io/figure/ogp.png">
-  <meta property="og:description" content="理工系学術サークル「Wathematica」の過去ゼミ一覧です。">
-  <title>過去ゼミ一覧 | Wathematica</title>
+  <meta property="og:description" content="理工系学術サークル「Wathematica」のイベント一覧です。">
+  <title>イベント一覧 | Wathematica</title>
   <link rel="icon" href="/favicon.png">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png">
@@ -20,9 +21,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./ress.css">
   <link rel="stylesheet" href="./common.css">
-  <link rel="stylesheet" href="./closed.css">
+  <link rel="stylesheet" href="./events/camp.css">
+  <link rel="stylesheet" href="./events.css">
   <script defer src="./index.js"></script>
 </head>
+
 <body>
   <header class="header page__header">
     <h1 class="header__title">
@@ -44,7 +47,7 @@
           <a class="navigation__link" href="/index.html#activity">Activity</a>
         </li>
         <li class="navigation__item">
-          <a class="navigation__link" href="/index.html#seminar">Seminar</a>
+          <a class="navigation__link" href="./seminar.html">Seminar</a>
         </li>
         <li class="navigation__item">
           <a class="navigation__link" href="./events.html">Events</a>
@@ -52,27 +55,36 @@
         <li class="navigation__item">
           <a class="navigation__link" href="/index.html#contact">Contact</a>
         </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="/Q&A.html">Q&A</a>
+        </li>
       </ul>
     </nav>
   </header>
   <main class="page__content">
-    <h2>過去ゼミ一覧</h2>
-    <p>このページでは、過去に行われていたゼミを掲載しています。<a href="./seminar.html">活動中のゼミはこちらからご覧ください</a>。</p>
-    <h3><time datetime="2023">2023年度</time></h3>
-    <ul class="seminarlist">
-      <li>ソリトンの数理ゼミ</li>
-      <li>代数曲線ゼミ</li>
-      <li>表現論ゼミ</li>
-    </ul>
-    <h3><time datetime="2022">2022年度</time></h3>
-    <ul class="seminarlist">
-      <li>b4院試対策進捗報告会</li>
-      <li>群論ゼミ</li>
-      <li>佐武線型ゼミ</li>
-      <li>有機化学演習ゼミ</li>
-      <li>流体力学ゼミ</li>
-      <li>量子計算ゼミ</li>
-    </ul>
+    <section class="section">
+      <h2 class="section__title">イベント一覧</h2>
+      <div class="event-links">
+        <a class="event-links__card" href="./events/2026/shinkan.html">
+          <span class="event-links__title">新歓2026</span>
+          <span class="event-links__description">新入生歓迎イベント</span>
+        </a>
+        <a class="event-links__card" href="./events/2025/rikoten.html"
+          style="background-image: url('./events/2025/rikoten_eyecatch.png')">
+          <span class="event-links__title">理工展2025</span>
+          <span class="event-links__description">ポスター展示</span>
+        </a>
+        <a class="event-links__card" href="./events/camp.html">
+          <span class="event-links__title">合宿</span>
+          <span class="event-links__description">春・夏の勉強合宿</span>
+        </a>
+        <a class="event-links__card" href="./events/advent_calender.html"
+          style="background-image: url('./events/advent/advent2025.webp')">
+          <span class="event-links__title">アドベントカレンダー</span>
+          <span class="event-links__description">12月の記事リレー企画</span>
+        </a>
+      </div>
+    </section>
   </main>
   <footer class="footer page__footer">
     <ul class="snslist footer__snslist">
@@ -90,4 +102,5 @@
     <small class="footer__copyright">© 2022 Wathematica</small>
   </footer>
 </body>
+
 </html>
