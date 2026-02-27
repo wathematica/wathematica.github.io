@@ -27,7 +27,15 @@
 .seminar-card {
   border: solid 1px var(--separator-color);
   border-radius: 5px;
+  max-height: 200px;
+  min-height: 200px;
+  overflow: hidden;
   padding: 15px;
+  position: relative;
+}
+
+.seminar-card.is-expanded {
+  max-height: none;
 }
 
 .seminar-card__name {
@@ -39,4 +47,24 @@
 .seminar-card__description {
   font-size: 0.85rem;
   line-height: 1.6;
+}
+
+.seminar-card__toggle {
+  background: linear-gradient(transparent, var(--bg-color, #fff) 50%);
+  border: none;
+  bottom: 0;
+  color: var(--link-color, #0066cc);
+  cursor: pointer;
+  font-size: 0.8rem;
+  left: 0;
+  padding: 24px 15px 8px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.seminar-card.is-expanded .seminar-card__toggle {
+  background: none;
+  padding: 8px 15px;
+  position: relative;
 }
