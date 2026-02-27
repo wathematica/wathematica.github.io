@@ -1,59 +1,42 @@
-/* ゼミ */
+/* セクションタイトル */
 
-.seminarlist__item {
-  margin-bottom: 10px;
+.section-title {
+  border-bottom: 2px solid var(--separator-color);
+  font-weight: bold;
+  margin-top: 2rem;
+  padding-bottom: 0.3rem;
 }
 
-.seminar {
+/* ゼミカードグリッド */
+
+.seminar-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 1rem;
+}
+
+@media (min-width: 700px) {
+  .seminar-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ゼミカード */
+
+.seminar-card {
   border: solid 1px var(--separator-color);
   border-radius: 5px;
   padding: 15px;
 }
 
-.seminar__name {
+.seminar-card__name {
   font-size: 1rem;
+  font-weight: bold;
   margin-bottom: 0.5rem;
-  padding: unset;
 }
 
-.seminar__gallery {
-  margin-top: 0.5em;
-}
-
-/* タグ集 */
-
-.taglist::after {
-  clear: both;
-  content: "";
-  display: block;
-}
-
-.taglist__item {
-  border: solid 1px;
-  border-radius: 0.4em;
-  display: block;
-  float: left;
-  font-size: 0.8rem;
-  margin: 0.2em;
-  padding: 0 0.3em;
-}
-
-/* ギャラリー */
-
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  list-style: none;
-}
-
-.gallery__item {
-  border: solid 1px var(--separator-color);
-  margin: 0.5em;
-}
-
-.gallery__image {
-  background: var(--text-color);
-  display: block;
-  object-fit: contain;
+.seminar-card__description {
+  font-size: 0.85rem;
+  line-height: 1.6;
 }

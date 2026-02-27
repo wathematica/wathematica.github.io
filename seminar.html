@@ -23,7 +23,6 @@
   <link rel="stylesheet" href="./common.css">
   <link rel="stylesheet" href="./seminar.css">
   <script defer src="./index.js"></script>
-  <script defer src="./seminar.js"></script>
 </head>
 
 <body>
@@ -64,152 +63,51 @@
   <main class="page__content">
     <h2>ゼミ紹介</h2>
     <p>このページでは、活動中のゼミを掲載しています。<a href="./closed.html">過去に行われていたゼミはこちらからご覧ください</a>。</p>
-    <div id="seminarlist">
-      <article class="seminar seminarlist__item" data-ruby="あおゆきえぜみ">
-        <div class="seminar__info">
-          <h3 class="seminar__name">青雪江ゼミ</h3>
-          <ul class="taglist">
-            <li class="taglist__item">群</li>
-            <li class="taglist__item">環</li>
-            <li class="taglist__item">体</li>
-            <li class="taglist__item">ガロア理論</li>
-          </ul>
-        </div>
-        <details class="seminar__detail">
-          <summary>詳細</summary>
-          <p>雪江明彦『代数学2環と体とガロア理論』を去年の夏から読み進めています。今年の夏休みからはこの本の最終章（ガロア理論）を読み、方程式の可解性などに関する理解を目指します。
-          </p>
-          <ul class="seminar__gallery gallery">
-            <li class="gallery__item">
-              <img class="gallery__image" src="./seminar/ring_theory_text.webp" alt="代数学2 環と体とガロア理論の書影" width="200"
-                height="150" loading="lazy">
-            </li>
-          </ul>
-        </details>
-      </article>
-      <article class="seminar seminarlist__item" data-ruby="あくちゅありーすうがくぜみ">
-        <div class="seminar__info">
-          <h3 class="seminar__name">アクチュアリー数学ゼミ</h3>
-          <ul class="taglist">
-            <li class="taglist__item">資格試験</li>
-            <li class="taglist__item">保険</li>
-            <li class="taglist__item">金融</li>
-            <li class="taglist__item">確率</li>
-            <li class="taglist__item">統計</li>
-          </ul>
-        </div>
-        <details class="seminar__detail">
-          <summary>詳細</summary>
-          <p>
-            アクチュアリー試験を目標の一つとしたゼミです。この資格試験は、確率統計を用いて保険業等の数理的側面を担うアクチュアリー職への登竜門になります。資格を目指すと同時に、確率・統計の応用的な部分を学ぶことができるゼミです。
-          </p>
-        </details>
-      </article>
-      <article class="seminar seminarlist__item" data-ruby="ありほんぜみ">
-        <div class="seminar__info">
-          <h3 class="seminar__name">蟻本ゼミ</h3>
-          <ul class="taglist">
-            <li class="taglist__item">アルゴリズム</li>
-            <li class="taglist__item">競技プログラミング</li>
-          </ul>
-        </div>
-        <details class="seminar__detail">
-          <summary>詳細</summary>
-          <p>
-            AtCoderという競技プログラミングのサイトを利用して、アルゴリズムの勉強会をしています。バーチャルコンテストをやったり、各自問題を解いてきて解説したりしています。「蟻本」ゼミという名前なのは、昨年度は「蟻本」と呼ばれる参考書を使用してゼミを行っていたからです。
-          </p>
-          <ul class="seminar__gallery gallery">
-            <li class="gallery__item">
-              <img class="gallery__image" src="./seminar/competitive_programming_whiteboard.webp" alt="蟻本ゼミの風景"
-                width="200" height="150" loading="lazy">
-            </li>
-          </ul>
-        </details>
-      </article>
-      <article class="seminar seminarlist__item" data-ruby="かんすうかいせきぜみ">
-        <div class="seminar__info">
-          <h3 class="seminar__name">関数解析ゼミ</h3>
-          <ul class="taglist">
-            <li class="taglist__item">バナッハ空間</li>
-            <li class="taglist__item">ヒルベルト空間</li>
-            <li class="taglist__item">線形作用素</li>
-            <li class="taglist__item">スペクトル</li>
-          </ul>
-        </div>
-        <details class="seminar__detail">
-          <summary>詳細</summary>
-          <p>
-            関数解析とはいわば無限次元の線形代数であり、さまざまな関数空間や線形作用素の性質を学びます。偏微分方程式や確率論、さらには量子力学など多くの応用があります。
-          </p>
-          <ul class="seminar__gallery gallery">
-            <li class="gallery__item">
-              <img class="gallery__image" src="./seminar/functional_analysis.webp" alt="関数解析ゼミの風景" width="200"
-                height="150" loading="lazy">
-            </li>
-          </ul>
-        </details>
-      </article>
-      <article class="seminar seminarlist__item" data-ruby="げーじりろんぜみ">
-        <div class="seminar__info">
-          <h3 class="seminar__name">ゲージ理論ゼミ</h3>
-          <ul class="taglist">
-            <li class="taglist__item">ゲージ場</li>
-            <li class="taglist__item">ゲージ変換</li>
-            <li class="taglist__item">インスタントン</li>
-            <li class="taglist__item">リーマン幾何</li>
-            <li class="taglist__item">モジュライ空間</li>
-          </ul>
-        </div>
-        <details class="seminar__detail">
-          <summary>詳細</summary>
-          <p>ゲージ理論は数学と物理の両方の側面がある分野です。物理で出てくるゲージ場などを幾何学的に定式化し、ゲージ理論を数学的に理解することを目指しています。参加者は物理専攻と数学専攻からなり、分野間の交流も図っています。
-          </p>
-          <ul class="seminar__gallery gallery">
-            <li class="gallery__item">
-              <img class="gallery__image" src="./seminar/gauge_theory.webp" alt="蟻本ゼミの風景" width="200" height="150"
-                loading="lazy">
-            </li>
-          </ul>
-        </details>
-      </article>
-      <article class="seminar seminarlist__item" data-ruby="とぅーたようたいぜみ">
-        <div class="seminar__info">
-          <h3 class="seminar__name">トゥー多様体ゼミ</h3>
-          <ul class="taglist">
-            <li class="taglist__item">多様体</li>
-          </ul>
-        </div>
-        <details class="seminar__detail">
-          <summary>詳細</summary>
-          <p>Loring W. Tu「トゥー多様体」を読んでいます。一般化ストークスの定理を目標に読み進めています。</p>
-          <ul class="seminar__gallery gallery">
-            <li class="gallery__item">
-              <img class="gallery__image" src="./seminar/tu_manifold_text.webp" alt="トゥー多様体の書影" width="200" height="150"
-                loading="lazy">
-            </li>
-            <li class="gallery__item">
-              <img class="gallery__image" src="./seminar/tu_manifold_whiteboard.webp" alt="トゥー多様体ゼミの風景" width="200"
-                height="150" loading="lazy">
-            </li>
-          </ul>
-        </details>
-      </article>
-      <article class="seminar seminarlist__item" data-ruby="りょうしりきがくかんすうかいせきぜみ">
-        <div class="seminar__info">
-          <h3 class="seminar__name">量子力学関数解析ゼミ</h3>
-          <ul class="taglist">
-            <li class="taglist__item">ヒルベルト空間</li>
-            <li class="taglist__item">自己共役作用素</li>
-            <li class="taglist__item">スペクトル解析</li>
-          </ul>
-        </div>
-        <details class="seminar__detail">
-          <summary>詳細</summary>
-          <p>量子力学を函数解析の立場から眺めるゼミです。ヒルベルト空間を導入してその空間自体やそれ上の（量子力学では物理量に対応する）線形演算子の性質を学びます。物理専攻と数学専攻の交流がさかんです。
-          </p>
-        </details>
-      </article>
-    </div>
+    <section>
+      <h3 class="section-title">数学</h3>
+      <div class="seminar-grid">
+        <article class="seminar-card">
+          <h4 class="seminar-card__name">青雪江ゼミ</h4>
+          <p class="seminar-card__description">雪江明彦『代数学2環と体とガロア理論』を読み進めています。ガロア理論を学び、方程式の可解性などに関する理解を目指します。</p>
+        </article>
+        <article class="seminar-card">
+          <h4 class="seminar-card__name">関数解析ゼミ</h4>
+          <p class="seminar-card__description">関数解析とはいわば無限次元の線形代数であり、さまざまな関数空間や線形作用素の性質を学びます。偏微分方程式や確率論、量子力学など多くの応用があります。</p>
+        </article>
+        <article class="seminar-card">
+          <h4 class="seminar-card__name">トゥー多様体ゼミ</h4>
+          <p class="seminar-card__description">Loring W. Tu「トゥー多様体」を読んでいます。一般化ストークスの定理を目標に読み進めています。</p>
+        </article>
+        <article class="seminar-card">
+          <h4 class="seminar-card__name">アクチュアリー数学ゼミ</h4>
+          <p class="seminar-card__description">アクチュアリー試験を目標の一つとしたゼミです。確率統計を用いて保険業等の数理的側面を学び、確率・統計の応用的な部分を習得できます。</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h3 class="section-title">物理</h3>
+      <div class="seminar-grid">
+        <article class="seminar-card">
+          <h4 class="seminar-card__name">ゲージ理論ゼミ</h4>
+          <p class="seminar-card__description">ゲージ理論は数学と物理の両方の側面がある分野です。物理で出てくるゲージ場などを幾何学的に定式化し、ゲージ理論を数学的に理解することを目指しています。</p>
+        </article>
+        <article class="seminar-card">
+          <h4 class="seminar-card__name">量子力学関数解析ゼミ</h4>
+          <p class="seminar-card__description">量子力学を函数解析の立場から眺めるゼミです。ヒルベルト空間上の線形演算子の性質を学びます。物理専攻と数学専攻の交流がさかんです。</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h3 class="section-title">その他</h3>
+      <div class="seminar-grid">
+        <article class="seminar-card">
+          <h4 class="seminar-card__name">蟻本ゼミ</h4>
+          <p class="seminar-card__description">AtCoderを利用して、アルゴリズムの勉強会をしています。バーチャルコンテストや、各自問題を解いてきて解説したりしています。</p>
+        </article>
+      </div>
+    </section>
   </main>
   <footer class="footer page__footer">
     <ul class="snslist footer__snslist">
