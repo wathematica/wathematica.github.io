@@ -32,10 +32,7 @@
   overflow: hidden;
   padding: 15px;
   position: relative;
-}
-
-.seminar-card.is-expanded {
-  max-height: none;
+  transition: max-height 0.4s ease;
 }
 
 .seminar-card__name {

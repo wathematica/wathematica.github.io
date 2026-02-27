@@ -8,8 +8,23 @@
         btn.className = "seminar-card__toggle";
         btn.textContent = "もっと見る";
         btn.addEventListener("click", () => {
-          const expanded = card.classList.toggle("is-expanded");
-          btn.textContent = expanded ? "閉じる" : "もっと見る";
+          if (card.classList.contains("is-expanded")) {
+            card.style.maxHeight = card.scrollHeight + "px";
+            requestAnimationFrame(() => {
+              card.style.maxHeight = "200px";
+            });
+            card.classList.remove("is-expanded");
+            btn.textContent = "もっと見る";
+          } else {
+            card.style.maxHeight = card.scrollHeight + "px";
+            card.classList.add("is-expanded");
+            btn.textContent = "閉じる";
+            card.addEventListener("transitionend", () => {
+              if (card.classList.contains("is-expanded")) {
+                card.style.maxHeight = "none";
+              }
+            }, { once: true });
+          }
         });
         card.appendChild(btn);
       }
