@@ -50,21 +50,40 @@
 }
 
 .seminar-card__toggle {
-  background: linear-gradient(transparent, var(--bg-color, #fff) 50%);
+  align-items: center;
+  background: linear-gradient(transparent, #fff 40%);
   border: none;
   bottom: 0;
-  color: var(--link-color, #0066cc);
+  color: var(--text-color);
   cursor: pointer;
-  font-size: 0.8rem;
+  display: flex;
+  font-size: 0.75rem;
+  gap: 4px;
+  justify-content: center;
   left: 0;
-  padding: 24px 15px 8px;
+  letter-spacing: 0.05em;
+  padding: 32px 15px 10px;
   position: absolute;
-  text-align: center;
   width: 100%;
+}
+
+.seminar-card__toggle::after {
+  content: "▼";
+  display: inline-block;
+  font-size: 0.6rem;
+  transition: transform 0.3s ease;
+}
+
+.seminar-card__toggle:hover {
+  opacity: 0.6;
 }
 
 .seminar-card.is-expanded .seminar-card__toggle {
   background: none;
-  padding: 8px 15px;
+  padding: 4px 15px 0;
   position: relative;
+}
+
+.seminar-card.is-expanded .seminar-card__toggle::after {
+  transform: rotate(180deg);
 }
