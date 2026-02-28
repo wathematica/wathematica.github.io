@@ -1,7 +1,7 @@
 /* スワイプギャラリー */
 
 .gallery {
-  margin: 0 0 2rem;
+  margin: 2rem 0;
   position: relative;
 }
 
@@ -53,12 +53,6 @@
 
 .gallery__dot.is-active {
   background: rgba(0, 0, 0, 0.7);
-}
-
-/* ページタイトル */
-
-.page__title {
-  border-bottom: none;
 }
 
 /* セクション */
