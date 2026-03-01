@@ -1,11 +1,11 @@
 /* スワイプギャラリー */
 
-.gallery {
+.camp-gallery {
   margin: 2rem 0;
   position: relative;
 }
 
-.gallery__container {
+.camp-gallery__container {
   display: flex;
   gap: 0.5rem;
   overflow-x: auto;
@@ -15,16 +15,16 @@
   -webkit-overflow-scrolling: touch;
 }
 
-.gallery__container::-webkit-scrollbar {
+.camp-gallery__container::-webkit-scrollbar {
   display: none;
 }
 
-.gallery__slide {
+.camp-gallery__slide {
   flex: 0 0 100%;
   scroll-snap-align: start;
 }
 
-.gallery__image {
+.camp-gallery__image {
   aspect-ratio: 16 / 9;
   display: block;
   object-fit: cover;
@@ -32,26 +32,26 @@
 }
 
 @media (min-width: 700px) {
-  .gallery__slide {
+  .camp-gallery__slide {
     flex: 0 0 calc((100% - 1rem) / 3);
   }
 }
 
-.gallery__indicators {
+.camp-gallery__indicators {
   display: flex;
   gap: 0.5rem;
   justify-content: center;
   margin-top: 1rem;
 }
 
-.gallery__dot {
+.camp-gallery__dot {
   background: rgba(0, 0, 0, 0.3);
   border-radius: 50%;
   height: 0.5rem;
   width: 0.5rem;
 }
 
-.gallery__dot.is-active {
+.camp-gallery__dot.is-active {
   background: rgba(0, 0, 0, 0.7);
 }
 

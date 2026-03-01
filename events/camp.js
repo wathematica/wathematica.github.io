@@ -2,12 +2,12 @@
   "use strict";
 
   window.addEventListener("DOMContentLoaded", () => {
-    const container = document.querySelector(".gallery__container");
-    const dots = document.querySelectorAll(".gallery__dot");
+    const container = document.querySelector(".camp-gallery__container");
+    const dots = document.querySelectorAll(".camp-gallery__dot");
 
     if (!container || dots.length === 0) return;
 
-    const slides = container.querySelectorAll(".gallery__slide");
+    const slides = container.querySelectorAll(".camp-gallery__slide");
     let autoplayTimer = null;
 
     dots[0].classList.add("is-active");
@@ -44,12 +44,10 @@
       const maxIndex = slides.length - num_elements;
       const nextIndex = index >= maxIndex ? 0 : index + 1;
 
-      container.style.scrollSnapType = "none";
       container.scrollTo({
         left: nextIndex * get_slide_width(),
         behavior: "smooth",
       });
-      setTimeout(() => { container.style.scrollSnapType = ""; }, 500);
     }
 
     const startAutoplay = () => {
