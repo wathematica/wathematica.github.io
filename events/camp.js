@@ -9,80 +9,67 @@
 
     const slides = container.querySelectorAll(".gallery__slide");
     let autoplayTimer = null;
-    let currentPage = 0;
 
     dots[0].classList.add("is-active");
 
-    function getClosestIndex() {
-      const containerCenter = container.scrollLeft + container.offsetWidth / 2;
-      let closestIndex = 0;
-      let closestDistance = Infinity;
-
-      slides.forEach((slide, index) => {
-        const slideCenter = slide.offsetLeft + slide.offsetWidth / 2;
-        const distance = Math.abs(containerCenter - slideCenter);
-        if (distance < closestDistance) {
-          closestDistance = distance;
-          closestIndex = index;
-        }
-      });
-
-      return closestIndex;
+    const get_slide_width = () => {
+      return slides[1].getBoundingClientRect().left - slides[0].getBoundingClientRect().left;
     }
 
-    function updateDots(index) {
+    const get_index = () => {
+      //左端のスライドのインデックスを取得する。
+      const containerLeft = container.getBoundingClientRect().left;
+      let closest = 0;
+      let minDist = Infinity;
+      slides.forEach((slide, i) => {
+        const dist = Math.abs(slide.getBoundingClientRect().left - containerLeft);
+        if (dist < minDist) {
+          minDist = dist;
+          closest = i;
+        }
+      });
+      return closest;
+    }
+
+    const updateDots = (index) => {
       dots.forEach((dot, i) => {
         dot.classList.toggle("is-active", i === index);
       });
     }
 
-    function nextSlide() {
+    const next_slide = () => {
       if (slides.length <= 1) return;
-      const step = slides[1].offsetLeft - slides[0].offsetLeft;
-      const maxScroll = container.scrollWidth - container.offsetWidth;
-      const pageCount = maxScroll > 0 ? Math.round(maxScroll / step) + 1 : 1;
+      const index = get_index();
+      const num_elements = container.clientWidth >= 700 ? 3 : 1;
+      const maxIndex = slides.length - num_elements;
+      const nextIndex = index >= maxIndex ? 0 : index + 1;
 
-      currentPage = (currentPage + 1) % pageCount;
-
-      if (currentPage === 0) {
-        container.scrollTo({ left: 0, behavior: "smooth" });
-      } else if (currentPage >= pageCount - 1) {
-        // 最終ページはmaxScrollに直接スクロールしてsnap誤差を回避
-        container.scrollTo({ left: maxScroll, behavior: "smooth" });
-      } else {
-        container.scrollTo({ left: currentPage * step, behavior: "smooth" });
-      }
+      container.style.scrollSnapType = "none";
+      container.scrollTo({
+        left: nextIndex * get_slide_width(),
+        behavior: "smooth",
+      });
+      setTimeout(() => { container.style.scrollSnapType = ""; }, 500);
     }
 
-    function startAutoplay() {
+    const startAutoplay = () => {
       stopAutoplay();
-      // 手動スクロール後のページ位置を同期
-      if (slides.length > 1) {
-        const step = slides[1].offsetLeft - slides[0].offsetLeft;
-        currentPage = step > 0 ? Math.round(container.scrollLeft / step) : 0;
-      }
-      autoplayTimer = setInterval(nextSlide, 5000);
-    }
+      autoplayTimer = setInterval(next_slide, 7000);
+    };
 
-    function stopAutoplay() {
-      if (autoplayTimer) {
-        clearInterval(autoplayTimer);
-        autoplayTimer = null;
-      }
-    }
+    const stopAutoplay = () => {
+      clearInterval(autoplayTimer);
+      autoplayTimer = null;
+    };
 
     container.addEventListener("scroll", () => {
-      updateDots(getClosestIndex());
+      updateDots(get_index());
     });
 
-    container.addEventListener("pointerdown", () => {
-      stopAutoplay();
-    });
-
-    container.addEventListener("pointerup", () => {
-      startAutoplay();
-    });
+    container.addEventListener("pointerdown", stopAutoplay);
+    container.addEventListener("pointerup", startAutoplay);
 
     startAutoplay();
+
   });
 })();
