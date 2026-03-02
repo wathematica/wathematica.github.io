@@ -9,8 +9,12 @@
 }
 
 h2 {
+  border-bottom: none;
   color: var(--rikoten-primary-color);
   font-weight: bold;
+  margin: 0;
+  text-align: left;
+  width: auto;
 }
 
 h3 {

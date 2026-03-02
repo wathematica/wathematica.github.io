@@ -1,59 +1,93 @@
-/* ゼミ */
+/* h2直後の説明文 */
 
-.seminarlist__item {
-  margin-bottom: 10px;
+h2+p {
+  margin-top: 2rem;
 }
 
-.seminar {
+/* セクションタイトル */
+
+.section-title {
+  border-bottom: 2px solid var(--separator-color);
+  font-weight: bold;
+  margin-top: 2rem;
+  padding-bottom: 0.3rem;
+}
+
+/* ゼミカードグリッド */
+
+.seminar-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 3rem;
+  margin-top: 1rem;
+}
+
+@media (min-width: 700px) {
+  .seminar-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ゼミカード */
+
+.seminar-card {
   border: solid 1px var(--separator-color);
   border-radius: 5px;
+  max-height: 200px;
+  min-height: 200px;
+  overflow: hidden;
   padding: 15px;
+  position: relative;
+  transition: max-height 0.4s ease;
 }
 
-.seminar__name {
+.seminar-card__name {
   font-size: 1rem;
+  font-weight: bold;
   margin-bottom: 0.5rem;
-  padding: unset;
 }
 
-.seminar__gallery {
-  margin-top: 0.5em;
+.seminar-card__description {
+  font-size: 0.85rem;
+  line-height: 1.6;
 }
 
-/* タグ集 */
-
-.taglist::after {
-  clear: both;
-  content: "";
-  display: block;
-}
-
-.taglist__item {
-  border: solid 1px;
-  border-radius: 0.4em;
-  display: block;
-  float: left;
-  font-size: 0.8rem;
-  margin: 0.2em;
-  padding: 0 0.3em;
-}
-
-/* ギャラリー */
-
-.gallery {
+.seminar-card__toggle {
+  align-items: center;
+  background: linear-gradient(transparent, #fff 40%);
+  border: none;
+  bottom: 0;
+  color: var(--text-color);
+  cursor: pointer;
   display: flex;
-  flex-wrap: wrap;
+  font-size: 0.75rem;
+  gap: 4px;
   justify-content: center;
-  list-style: none;
+  left: 0;
+  letter-spacing: 0.05em;
+  padding: 32px 15px 10px;
+  position: absolute;
+  width: 100%;
 }
 
-.gallery__item {
-  border: solid 1px var(--separator-color);
-  margin: 0.5em;
+.seminar-card__toggle::after {
+  content: "▼";
+  display: inline-block;
+  font-size: 0.6rem;
+  transition: transform 0.3s ease;
 }
 
-.gallery__image {
-  background: var(--text-color);
-  display: block;
-  object-fit: contain;
+.seminar-card__toggle:hover {
+  opacity: 0.6;
+}
+
+.seminar-card.is-expanded .seminar-card__toggle {
+  background: none;
+  padding: 4px 15px 0;
+  position: relative;
+}
+
+.seminar-card.is-expanded .seminar-card__toggle::after {
+  transform: rotate(180deg);
 }

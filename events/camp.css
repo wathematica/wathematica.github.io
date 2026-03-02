@@ -1,0 +1,113 @@
+/* スワイプギャラリー */
+
+.camp-gallery {
+  margin: 2rem 0;
+  position: relative;
+}
+
+.camp-gallery__container {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding: 0;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.camp-gallery__container::-webkit-scrollbar {
+  display: none;
+}
+
+.camp-gallery__slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+}
+
+.camp-gallery__image {
+  aspect-ratio: 16 / 9;
+  display: block;
+  object-fit: cover;
+  width: 100%;
+}
+
+@media (min-width: 700px) {
+  .camp-gallery__slide {
+    flex: 0 0 calc((100% - 1rem) / 3);
+  }
+}
+
+.camp-gallery__indicators {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.camp-gallery__dot {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  height: 0.5rem;
+  width: 0.5rem;
+}
+
+.camp-gallery__dot.is-active {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* セクション */
+
+.section {
+  padding: 2rem 0;
+}
+
+.section__title {
+  border-bottom: 1px solid var(--separator-color);
+  font-size: 1.6rem;
+  font-weight: normal;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+
+.section__text {
+  line-height: 1.8;
+}
+
+.section__content {
+  line-height: 1.8;
+}
+
+/* 過去のゼミ */
+
+.camp-seminars {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.camp-seminars__block {
+  border: 1px solid var(--separator-color);
+  border-radius: 0.5rem;
+  padding: 0 1.2rem;
+}
+
+.camp-seminars__block[open] {
+  padding-bottom: 1rem;
+}
+
+.camp-seminars__heading {
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 1rem 0;
+}
+
+.camp-seminars__list {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+.camp-seminars__list li {
+  padding: 0.2rem 0;
+}
