@@ -67,6 +67,14 @@ h3 {
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* 幅400px以上の列を自動で作る */
   gap: 40px; /* アイテム間の隙間 */
 }
+
+@media (max-width: 600px) {
+  #posterlist {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* スマホでは最小幅180pxに */
+    gap: 20px;
+  }
+}
+
 .posterlist__item {
   margin-bottom: 10px;
 }
@@ -83,6 +91,12 @@ h3 {
   font-weight: bold;
   margin-bottom: 0.5rem;
   padding: unset;
+}
+
+@media (max-width: 600px) {
+  .poster__name {
+    font-size: 1rem;
+  }
 }
 
 .poster__gallery {
