@@ -10,18 +10,42 @@
   padding-top: 2rem;
 }
 
-h2 {
-  font-weight: bold;
-}
-
-h3 {
-  font-weight: bold;
-}
-
 /* セクション */
 
-.shinkan-section {
-  margin-bottom: 2rem;
+.section {
+  padding: 2rem 0;
+}
+
+.section__title {
+  border-bottom: 1px solid var(--separator-color);
+  font-size: 1.6rem;
+  font-weight: normal;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+
+.section__content {
+  line-height: 1.8;
+}
+
+/* 講演会 分野リスト */
+
+.lecture-fields {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  margin: 1rem 0;
+}
+
+.lecture-fields__group h3 {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+.lecture-fields__group ul {
+  padding-left: 1.5em;
 }
 
 /* 凡例 */
