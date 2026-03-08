@@ -3,6 +3,7 @@
   --shinkan-lecture: #e8563a;
   --shinkan-seminar: #1a73e8;
   --shinkan-session: #0d9e6f;
+  --shinkan-university: #7b61ff;
 }
 
 .page__content {
@@ -58,6 +59,10 @@ h3 {
   background-color: var(--shinkan-session);
 }
 
+.legend-color--university {
+  background-color: var(--shinkan-university);
+}
+
 /* カレンダー */
 
 .calendar-wrapper {
@@ -109,7 +114,7 @@ h3 {
   text-align: center;
   font-size: 0.95rem;
   vertical-align: top;
-  height: 3rem;
+  height: 3.5rem;
   border-bottom: 1px solid #eee;
 }
 
@@ -125,51 +130,35 @@ h3 {
   background: none;
 }
 
-/* イベントがある日にラベルを表示するためのクラス */
+/* イベントラベル */
 
-.calendar__day--lecture::after {
-  content: attr(data-label);
+.calendar__event {
   display: block;
+  color: #fff;
+  font-size: 0.6rem;
+  line-height: 1.4;
+  border-radius: 3px;
+  padding: 0 2px;
+  margin-top: 1px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.calendar__event--lecture {
   background-color: var(--shinkan-lecture);
-  color: #fff;
-  font-size: 0.6rem;
-  line-height: 1.4;
-  border-radius: 3px;
-  padding: 0 2px;
-  margin-top: 2px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
-.calendar__day--seminar::after {
-  content: attr(data-label);
-  display: block;
+.calendar__event--seminar {
   background-color: var(--shinkan-seminar);
-  color: #fff;
-  font-size: 0.6rem;
-  line-height: 1.4;
-  border-radius: 3px;
-  padding: 0 2px;
-  margin-top: 2px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
-.calendar__day--session::after {
-  content: attr(data-label);
-  display: block;
+.calendar__event--session {
   background-color: var(--shinkan-session);
-  color: #fff;
-  font-size: 0.6rem;
-  line-height: 1.4;
-  border-radius: 3px;
-  padding: 0 2px;
-  margin-top: 2px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+}
+
+.calendar__event--university {
+  background-color: var(--shinkan-university);
 }
 
 /* スマホ時は縦並び */
