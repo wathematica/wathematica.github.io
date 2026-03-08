@@ -3,7 +3,7 @@
   --shinkan-lecture: #e8563a;
   --shinkan-seminar: #1a73e8;
   --shinkan-session: #0d9e6f;
-  --shinkan-university: #7b61ff;
+  --shinkan-booth: #f5a623;
 }
 
 .page__content {
@@ -59,8 +59,8 @@ h3 {
   background-color: var(--shinkan-session);
 }
 
-.legend-color--university {
-  background-color: var(--shinkan-university);
+.legend-color--booth {
+  background-color: var(--shinkan-booth);
 }
 
 /* カレンダー */
@@ -155,8 +155,8 @@ h3 {
   background-color: var(--shinkan-session);
 }
 
-.calendar__event--university {
-  background-color: var(--shinkan-university);
+.calendar__event--booth {
+  background-color: var(--shinkan-booth);
 }
 
 /* スマホ時は縦並び */
