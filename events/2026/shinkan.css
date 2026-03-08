@@ -67,8 +67,9 @@ h3 {
 }
 
 .calendar {
-  flex: 1;
+  flex: 1 1 calc(50% - 1rem);
   min-width: 280px;
+  max-width: calc(50% - 1rem);
 }
 
 .calendar__title {
