@@ -3,7 +3,6 @@
   --shinkan-lecture: #e8563a;
   --shinkan-seminar: #1a73e8;
   --shinkan-session: #0d9e6f;
-  --shinkan-booth: #f5a623;
 }
 
 .page__content {
@@ -81,10 +80,6 @@
 
 .legend-color--session {
   background-color: var(--shinkan-session);
-}
-
-.legend-color--booth {
-  background-color: var(--shinkan-booth);
 }
 
 /* カレンダー */
@@ -177,10 +172,6 @@
 
 .calendar__event--session {
   background-color: var(--shinkan-session);
-}
-
-.calendar__event--booth {
-  background-color: var(--shinkan-booth);
 }
 
 /* スマホ時は縦並び */
