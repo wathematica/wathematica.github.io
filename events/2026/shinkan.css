@@ -61,6 +61,7 @@
   gap: 7rem;
   flex-wrap: wrap;
   margin: 1rem 0;
+  padding-bottom: 2.5rem;
 }
 
 .seminar-fields__group {
@@ -77,6 +78,14 @@
 
 .seminar-fields__group ul {
   padding-left: 1.5em;
+}
+
+@media (max-width: 600px) {
+  .seminar-fields {
+    justify-content: flex-start;
+    padding-left: 2.5rem;
+    row-gap: 4.5rem;
+  }
 }
 
 /* 凡例 */
@@ -210,5 +219,9 @@
 @media (max-width: 640px) {
   .calendar-wrapper {
     flex-direction: column;
+  }
+
+  .calendar {
+    max-width: 100%;
   }
 }
