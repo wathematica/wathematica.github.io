@@ -24,6 +24,7 @@ h2 {
   margin: 0 auto;
   padding: calc((3 - 1.75) * 0.5em) 0;
   padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
   text-align: center;
   width: fit-content;
 }

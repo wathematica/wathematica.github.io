@@ -28,29 +28,56 @@
   line-height: 1.8;
 }
 
-/* 講演会 分野リスト */
+/* 講演会 分野グループ */
 
-.lecture-fields {
-  display: flex;
-  justify-content: center;
-  gap: 5rem;
-  margin: 1rem 0;
+.lecture-group {
+  margin-bottom: 2rem;
 }
 
-.lecture-fields__group {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.lecture-fields__group h3 {
+.lecture-group__title {
+  border-bottom: 2px solid var(--separator-color);
   font-weight: bold;
   font-size: 1.1rem;
-  margin-bottom: 0.3rem;
+  padding-bottom: 0.3rem;
+  margin-top: 1.5rem;
 }
 
-.lecture-fields__group ul {
-  padding-left: 1.5em;
+.lecture-group__info {
+  margin: 0.5rem 0;
+}
+
+/* 講演カードグリッド */
+
+.lecture-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 1rem;
+}
+
+@media (max-width: 600px) {
+  .lecture-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 講演カード */
+
+.lecture-card {
+  border: solid 2px #bbb;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.lecture-card__title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.lecture-card__abstract {
+  font-size: 0.85rem;
+  line-height: 1.6;
 }
 
 /* 新歓ゼミ 分野リスト */
