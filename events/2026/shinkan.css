@@ -28,63 +28,127 @@
   line-height: 1.8;
 }
 
-/* 講演会 分野リスト */
+/* 講演会 分野グループ */
 
-.lecture-fields {
-  display: flex;
-  justify-content: center;
-  gap: 5rem;
-  margin: 1rem 0;
+.lecture-group {
+  margin-bottom: 2rem;
 }
 
-.lecture-fields__group {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.lecture-fields__group h3 {
+.lecture-group__title {
+  border-bottom: 2px solid var(--separator-color);
   font-weight: bold;
   font-size: 1.1rem;
-  margin-bottom: 0.3rem;
+  padding-bottom: 0.3rem;
+  margin-top: 1.5rem;
 }
 
-.lecture-fields__group ul {
-  padding-left: 1.5em;
+.lecture-group__info {
+  margin: 0.5rem 0;
+}
+
+/* 講演カードグリッド */
+
+.lecture-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 1rem;
+}
+
+@media (max-width: 600px) {
+  .lecture-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 講演カード */
+
+.lecture-card {
+  border: solid 2px #bbb;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.lecture-card__title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.lecture-card__abstract {
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+/* 新歓ゼミ サブセクション */
+
+.seminar-subsection {
+  margin-top: 1.5rem;
+}
+
+.seminar-subsection__title {
+  border-bottom: 2px solid var(--separator-color);
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding-bottom: 0.3rem;
+}
+
+.seminar-subsection ul {
+  list-style-position: inside;
+  padding-left: 0;
 }
 
 /* 新歓ゼミ 分野リスト */
 
 .seminar-fields {
-  display: flex;
-  justify-content: center;
-  gap: 7rem;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
   margin: 1rem 0;
   padding-bottom: 2.5rem;
 }
 
 .seminar-fields__group {
+  border: solid 2px #bbb;
+  border-radius: 5px;
+  padding: 1rem 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.seminar-fields__group h3 {
+.seminar-fields__group h3,
+.seminar-fields__group h4 {
   font-weight: bold;
   font-size: 1.1rem;
-  margin-bottom: 0.3rem;
+  padding-bottom: 0.4rem;
+  margin: 0 -1.5rem 0.3rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  border-bottom: 2px solid #bbb;
+  width: calc(100% + 3rem);
+  text-align: center;
 }
 
 .seminar-fields__group ul {
-  padding-left: 1.5em;
+  list-style: none;
+  padding-left: 0;
+  width: 100%;
+}
+
+.seminar-fields__group li {
+  padding: 0.4rem 0;
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.seminar-fields__group li:last-child {
+  border-bottom: none;
 }
 
 @media (max-width: 600px) {
   .seminar-fields {
-    justify-content: flex-start;
-    padding-left: 2.5rem;
-    row-gap: 4.5rem;
+    grid-template-columns: 1fr;
   }
 }
 
