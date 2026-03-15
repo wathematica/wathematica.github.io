@@ -116,11 +116,29 @@
 .seminar-fields__group h4 {
   font-weight: bold;
   font-size: 1.1rem;
-  margin-bottom: 0.3rem;
+  padding-bottom: 0.4rem;
+  margin: 0 -1.5rem 0.3rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  border-bottom: 2px solid #bbb;
+  width: calc(100% + 3rem);
+  text-align: center;
 }
 
 .seminar-fields__group ul {
-  padding-left: 1.5em;
+  list-style: none;
+  padding-left: 0;
+  width: 100%;
+}
+
+.seminar-fields__group li {
+  padding: 0.4rem 0;
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.seminar-fields__group li:last-child {
+  border-bottom: none;
 }
 
 @media (max-width: 600px) {
