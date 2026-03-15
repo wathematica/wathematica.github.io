@@ -1,0 +1,227 @@
+:root {
+  --shinkan-primary: #1a73e8;
+  --shinkan-lecture: #e8563a;
+  --shinkan-seminar: #1a73e8;
+  --shinkan-session: #0d9e6f;
+}
+
+.page__content {
+  padding-top: 2rem;
+}
+
+/* セクション */
+
+.section {
+  padding: 2rem 0;
+}
+
+.section__title {
+  border-bottom: 1px solid var(--separator-color);
+  font-size: 1.6rem;
+  font-weight: normal;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+
+.section__content {
+  line-height: 1.8;
+}
+
+/* 講演会 分野リスト */
+
+.lecture-fields {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  margin: 1rem 0;
+}
+
+.lecture-fields__group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lecture-fields__group h3 {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+.lecture-fields__group ul {
+  padding-left: 1.5em;
+}
+
+/* 新歓ゼミ 分野リスト */
+
+.seminar-fields {
+  display: flex;
+  justify-content: center;
+  gap: 7rem;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+  padding-bottom: 2.5rem;
+}
+
+.seminar-fields__group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.seminar-fields__group h3 {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+.seminar-fields__group ul {
+  padding-left: 1.5em;
+}
+
+@media (max-width: 600px) {
+  .seminar-fields {
+    justify-content: flex-start;
+    padding-left: 2.5rem;
+    row-gap: 4.5rem;
+  }
+}
+
+/* 凡例 */
+
+.calendar-legend {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+}
+
+.legend-color {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+}
+
+.legend-color--lecture {
+  background-color: var(--shinkan-lecture);
+}
+
+.legend-color--seminar {
+  background-color: var(--shinkan-seminar);
+}
+
+.legend-color--session {
+  background-color: var(--shinkan-session);
+}
+
+/* カレンダー */
+
+.calendar-wrapper {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.calendar {
+  flex: 1 1 calc(50% - 1rem);
+  min-width: 280px;
+  max-width: calc(50% - 1rem);
+}
+
+.calendar__title {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  padding: 0;
+}
+
+.calendar__table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.calendar__dow {
+  padding: 0.4rem 0;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: normal;
+  color: var(--text-color);
+  border-bottom: 2px solid var(--separator-color);
+}
+
+.calendar__dow--sun {
+  color: #d32f2f;
+}
+
+.calendar__dow--sat {
+  color: #1565c0;
+}
+
+.calendar__day {
+  position: relative;
+  padding: 0.5rem 0.2rem;
+  text-align: center;
+  font-size: 0.95rem;
+  vertical-align: top;
+  height: 4.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.calendar__day--sun {
+  color: #d32f2f;
+}
+
+.calendar__day--sat {
+  color: #1565c0;
+}
+
+.calendar__day--empty {
+  background: none;
+}
+
+/* イベントラベル */
+
+.calendar__event {
+  display: block;
+  color: #fff;
+  font-size: 0.6rem;
+  line-height: 1.4;
+  border-radius: 3px;
+  padding: 0 2px;
+  margin-top: 1px;
+  word-break: break-all;
+}
+
+.calendar__event--lecture {
+  background-color: var(--shinkan-lecture);
+}
+
+.calendar__event--seminar {
+  background-color: var(--shinkan-seminar);
+}
+
+.calendar__event--session {
+  background-color: var(--shinkan-session);
+}
+
+/* スマホ時は縦並び */
+@media (max-width: 640px) {
+  .calendar-wrapper {
+    flex-direction: column;
+  }
+
+  .calendar {
+    max-width: 100%;
+  }
+}
