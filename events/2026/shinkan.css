@@ -93,6 +93,11 @@
   padding-bottom: 0.3rem;
 }
 
+.seminar-subsection ul {
+  list-style-position: inside;
+  padding-left: 0;
+}
+
 /* 新歓ゼミ 分野リスト */
 
 .seminar-fields {
