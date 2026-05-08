@@ -80,6 +80,11 @@
   line-height: 1.6;
 }
 
+.lecture-card__abstract--standalone {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 /* 新歓ゼミ サブセクション */
 
 .seminar-subsection {
