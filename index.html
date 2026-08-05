@@ -1,226 +1,388 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja" prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta
+            name="description"
+            content=" Wathematicaは早稲田大学の学生を中心に理工系の学問を共に学び合うことを目的とした自主ゼミサークルです。"
+        />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@wathematica" />
+        <meta property="og:title" content="Wathematica" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://wathematica.github.io/" />
+        <meta
+            property="og:image"
+            content="https://wathematica.github.io/figure/ogp.png"
+        />
+        <meta
+            property="og:description"
+            content=" Wathematicaは早稲田大学の学生を中心に理工系の学問を共に学び合うことを目的とした自主ゼミサークルです。"
+        />
+        <title>Wathematica</title>
+        <link rel="icon" href="/favicon.png" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@100;400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./ress.css" />
+        <link rel="stylesheet" href="./common.css" />
+        <link rel="stylesheet" href="./index.css" />
+        <script defer src="./index.js"></script>
+    </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content=" Wathematicaは早稲田大学の学生を中心に理工系の学問を共に学び合うことを目的とした自主ゼミサークルです。">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@wathematica">
-  <meta property="og:title" content="Wathematica">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://wathematica.github.io/">
-  <meta property="og:image" content="https://wathematica.github.io/figure/ogp.png">
-  <meta property="og:description" content=" Wathematicaは早稲田大学の学生を中心に理工系の学問を共に学び合うことを目的とした自主ゼミサークルです。">
-  <title>Wathematica</title>
-  <link rel="icon" href="/favicon.png">
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@100;400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./ress.css">
-  <link rel="stylesheet" href="./common.css">
-  <link rel="stylesheet" href="./index.css">
-  <script defer src="./index.js"></script>
-</head>
+    <body>
+        <header class="header page__header">
+            <h1 class="header__title">
+                <a href="#">
+                    <img
+                        class="header__logo"
+                        src="./figure/logo.svg"
+                        alt="Wathematica"
+                        width="250"
+                        height="32"
+                    />
+                </a>
+            </h1>
+            <button class="hamburger" aria-label="メニューを開く">
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+            </button>
+            <nav class="header__navigation">
+                <ul class="navigation">
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#">Home</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="./seminar.html"
+                            >Seminar</a
+                        >
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="./events.html"
+                            >Events</a
+                        >
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="./join.html">Join</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="/Q&A.html">Q&A</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!--<aside class="announcement">ここにイベントの告知などのを書いてもよい</aside>-->
+        <section class="gallery">
+            <div class="gallery__container">
+                <div class="gallery__slide">
+                    <img
+                        src="/figure/eyecatch.webp"
+                        alt="ゼミの様子"
+                        class="gallery__image"
+                    />
+                </div>
+                <div class="gallery__slide">
+                    <img
+                        src="gallery/1.webp"
+                        alt="ゼミの様子"
+                        class="gallery__image"
+                    />
+                </div>
+                <div class="gallery__slide">
+                    <img
+                        src="gallery/2.webp"
+                        alt="ゼミの様子"
+                        class="gallery__image"
+                    />
+                </div>
+                <div class="gallery__slide">
+                    <img
+                        src="gallery/3.webp"
+                        alt="集合写真"
+                        class="gallery__image"
+                    />
+                </div>
+                <div class="gallery__slide">
+                    <img
+                        src="gallery/4.webp"
+                        alt="黒板アート"
+                        class="gallery__image"
+                    />
+                </div>
+            </div>
+            <div class="gallery__indicators">
+                <span class="gallery__dot"></span>
+                <span class="gallery__dot"></span>
+                <span class="gallery__dot"></span>
+                <span class="gallery__dot"></span>
+                <span class="gallery__dot"></span>
+            </div>
+        </section>
+        <h2 class="catchphrase">知の最前線へ。<wbr />僕らは一人じゃない。</h2>
+        <main class="page__content">
+            <div class="sectionlist__item">
+                <p>
+                    Wathematicaは早稲田大学の学生を中心に理工系の学問を共に学び合うことを目的とした自主ゼミサークルです。現在150名を超える会員が在籍し、自主ゼミや発表会を軸に活発に活動しています。
+                </p>
+                <p>
+                    当サークルの魅力は、学部学科・学年の壁を越えた交流にあります。学問への探求心を持つ学生が集まっているため、自分の専門外の関心事にも触れることができ、互いに良い刺激を与え合える環境が整っています。また幅広い学年のメンバーが所属しているため、基礎的な内容から高度な専門分野まで、難易度を問わず気軽に質問や相談ができる風通しの良さも特徴です。
+                </p>
+                <p>
+                    「学問に興味はあるけれど、何から始めればいいか分からない」という方から、「仲間と共にさらなる高みを目指したい」という方まで、皆さんの入会を心よりお待ちしています！
+                </p>
+            </div>
 
-<body>
-  <header class="header page__header">
-    <h1 class="header__title">
-      <a href="#">
-        <img class="header__logo" src="./figure/logo.svg" alt="Wathematica" width="250" height="32">
-      </a>
-    </h1>
-    <button class="hamburger" aria-label="メニューを開く">
-      <span class="hamburger__line"></span>
-      <span class="hamburger__line"></span>
-      <span class="hamburger__line"></span>
-    </button>
-    <nav class="header__navigation">
-      <ul class="navigation">
-        <li class="navigation__item">
-          <a class="navigation__link" href="#">Home</a>
-        </li>
-        <li class="navigation__item">
-          <a class="navigation__link" href="./seminar.html">Seminar</a>
-        </li>
-        <li class="navigation__item">
-          <a class="navigation__link" href="./events.html">Events</a>
-        </li>
-        <li class="navigation__item">
-          <a class="navigation__link" href="./join.html">Join</a>
-        </li>
-        <li class="navigation__item">
-          <a class="navigation__link" href="/Q&A.html">Q&A</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-  <!--<aside class="announcement">ここにイベントの告知などのを書いてもよい</aside>-->
-  <section class="gallery">
-    <div class="gallery__container">
-      <div class="gallery__slide">
-        <img src="/figure/eyecatch.webp" alt="ゼミの様子" class="gallery__image">
-      </div>
-      <div class="gallery__slide">
-        <img src="gallery/1.webp" alt="ゼミの様子" class="gallery__image">
-      </div>
-      <div class="gallery__slide">
-        <img src="gallery/2.webp" alt="ゼミの様子" class="gallery__image">
-      </div>
-      <div class="gallery__slide">
-        <img src="gallery/3.webp" alt="集合写真" class="gallery__image">
-      </div>
-      <div class="gallery__slide">
-        <img src="gallery/4.webp" alt="黒板アート" class="gallery__image">
-      </div>
-    </div>
-    <div class="gallery__indicators">
-      <span class="gallery__dot"></span>
-      <span class="gallery__dot"></span>
-      <span class="gallery__dot"></span>
-      <span class="gallery__dot"></span>
-      <span class="gallery__dot"></span>
-    </div>
-  </section>
-  <h2 class="catchphrase">知の最前線へ。<wbr>僕らは一人じゃない。</h2>
-  <main class="page__content">
-    <div class="sectionlist__item">
-      <p>
-        Wathematicaは早稲田大学の学生を中心に理工系の学問を共に学び合うことを目的とした自主ゼミサークルです。現在150名を超える会員が在籍し、自主ゼミや発表会を軸に活発に活動しています。
-      </p>
-      <p>
-        当サークルの魅力は、学部学科・学年の壁を越えた交流にあります。学問への探求心を持つ学生が集まっているため、自分の専門外の関心事にも触れることができ、互いに良い刺激を与え合える環境が整っています。また幅広い学年のメンバーが所属しているため、基礎的な内容から高度な専門分野まで、難易度を問わず気軽に質問や相談ができる風通しの良さも特徴です。
-      </p>
-      <p>
-        「学問に興味はあるけれど、何から始めればいいか分からない」という方から、「仲間と共にさらなる高みを目指したい」という方まで、皆さんの入会を心よりお待ちしています！
-      </p>
-    </div>
+            <section id="activity" class="sectionlist__item">
+                <h2>活動内容</h2>
+                <p>
+                    Wathematicaでは、各メンバーがゼミという小グループに分かれて活動しています。特に、参考書の内容に対する理解を協力して深めていく、輪読形式のゼミが多くあります。
+                </p>
+                <p>
+                    ゼミの内容はとにかく自由。学びたいことがある人も、見つけられなくて悩んでる人も、ここでなら協力する仲間を見つけられるはずです。
+                </p>
+                <p>
+                    毎月の定例会以外は全体での活動がないので、予定を自由に立てられます。会費もありません。興味があるかたはぜひ、お気軽にご連絡ください。
+                </p>
+            </section>
 
+            <section id="" class="sectionlist__item">
+                <h2>自主ゼミとは？</h2>
+                <p>
+                    自主ゼミは、学生が主体となって特定の分野を探究する少人数の勉強会です。
+                    選定した専門書を参加者が分担して解説する「輪読形式」を基本としており、発表者の解説をもとに議論を交わすことで、独学以上の深い理解を目指します。
+                    難解な専門書であっても、仲間と協力することで読破が可能になるほか、発表の準備や質疑応答を通じて、論理的な思考力や伝える力を養うことができる貴重な場です。
+                </p>
+            </section>
 
-    <section id="activity" class="sectionlist__item">
-      <h2>活動内容</h2>
-      <p>Wathematicaでは、各メンバーがゼミという小グループに分かれて活動しています。特に、参考書の内容に対する理解を協力して深めていく、輪読形式のゼミが多くあります。</p>
-      <p>ゼミの内容はとにかく自由。学びたいことがある人も、見つけられなくて悩んでる人も、ここでなら協力する仲間を見つけられるはずです。</p>
-      <p>毎月の定例会以外は全体での活動がないので、予定を自由に立てられます。会費もありません。興味があるかたはぜひ、お気軽にご連絡ください。</p>
-    </section>
+            <section class="sectionlist__item">
+                <h2>新着情報</h2>
+                <ol class="newslist">
+                    <li class="news news list__item">
+                        <time class="news__date">2026年5月13日</time>
+                        <span class="news__summary"
+                            >新歓ページを更新しました。</span
+                        >
+                    </li>
+                    <li class="news news list__item">
+                        <time class="news__date">2026年5月8日</time>
+                        <span class="news__summary"
+                            >新歓公演について内容を更新しました</span
+                        >
+                    </li>
+                    <li class="news news newslist__item">
+                        <time class="news__data" datetime=""
+                            >2026年4月11日</time
+                        >
+                        <span class="news__summary"
+                            >ゼミの紹介を更新しました。</span
+                        >
+                    </li>
 
-    <section id="" class="sectionlist__item">
-      <h2>自主ゼミとは？</h2>
-      <p>
-        自主ゼミは、学生が主体となって特定の分野を探究する少人数の勉強会です。
-        選定した専門書を参加者が分担して解説する「輪読形式」を基本としており、発表者の解説をもとに議論を交わすことで、独学以上の深い理解を目指します。
-        難解な専門書であっても、仲間と協力することで読破が可能になるほか、発表の準備や質疑応答を通じて、論理的な思考力や伝える力を養うことができる貴重な場です。
-      </p>
-    </section>
+                    <li class="news newslist__item">
+                        <time class="news__date" datetime=""
+                            >2026年3月21日</time
+                        >
+                        <span class="news__summary"
+                            >新歓講演会の内容を追加しました。</span
+                        >
+                    </li>
+                    <li class="news newslist__item">
+                        <time class="news__date" datetime=""
+                            >2026年3月16日</time
+                        >
+                        <span class="news__summary"
+                            >新歓ページの公開を行いました</span
+                        >
+                    </li>
+                    <li class="news newslist__item">
+                        <time class="news__date" datetime="">2026年3月2日</time>
+                        <span class="news__summary"
+                            >サイトの改修を行いました</span
+                        >
+                    </li>
+                    <li class="news newslist__item">
+                        <time class="news__date" datetime="2025-10-25"
+                            >2025年10月25日</time
+                        >
+                        <span class="news__summary"
+                            >今年度の理工展でポスター展示を行います。詳細は<a
+                                href="./events/2025/rikoten.html"
+                                target="_blank"
+                                rel="noreferrer"
+                                >こちら</a
+                            >。</span
+                        >
+                    </li>
+                    <li class="news newslist__item">
+                        <time class="news__date" datetime="2024-05-15"
+                            >2024年5月15日</time
+                        >
+                        <span class="news__summary"
+                            >アクチュアリー数学ゼミ・関数解析ゼミ・ゲージ理論ゼミ・量子力学関数解析ゼミの紹介を追加しました。</span
+                        >
+                    </li>
+                    <li class="news newslist__item">
+                        <time class="news__date" datetime="2024-04-01"
+                            >2024年4月1日</time
+                        >
+                        <span class="news__summary"
+                            >3月25日に<a
+                                href="https://twitter.com/wathematica/status/1772101139460505966"
+                                target="_blank"
+                                rel="noreferrer"
+                                >新歓ゼミ</a
+                            >参加者の募集を開始しました。他にも<a
+                                href="https://twitter.com/wathematica/status/1774265543991980504"
+                                >新歓ブース</a
+                            >や<a
+                                href="https://twitter.com/wathematica/status/1773535745501773844"
+                                >オンライン説明会</a
+                            >などのイベントを予定しています。詳細はリンク先をご覧ください。</span
+                        >
+                    </li>
+                    <li class="news newslist__item">
+                        <time class="news__date" datetime="2024-03-18"
+                            >2024年3月18日</time
+                        >
+                        <span class="news__summary"
+                            >3月4日に<a
+                                href="https://www.instagram.com/wathematica_waseda"
+                                target="_blank"
+                                rel="noreferrer"
+                                >公式Instagram</a
+                            >を開設しました。</span
+                        >
+                    </li>
+                    <li class="news newslist__item">
+                        <time class="news__date" datetime="2023-07-09"
+                            >2023年7月9日</time
+                        >
+                        <span class="news__summary"
+                            >青雪江ゼミ・代数曲線ゼミ・トゥー多様体ゼミ・蟻本ゼミの紹介を追加しました。</span
+                        >
+                    </li>
+                    <li class="news newslist__item">
+                        <time class="news__date" datetime="2023-03-17"
+                            >2023年3月17日</time
+                        >
+                        <span class="news__summary"
+                            ><a
+                                href="https://twitter.com/wathematica/status/1508077735427866633?cxt=HHwWkoDUnbqt4u0pAAAA"
+                                target="_blank"
+                                rel="noreferrer"
+                                >新歓ゼミ</a
+                            >についての告知を行いました。</span
+                        >
+                    </li>
+                    <li class="news newslist__item">
+                        <time class="news__date" datetime="2022-04-04"
+                            >2022年4月4日</time
+                        >
+                        <span class="news__summary"
+                            ><a
+                                href="https://twitter.com/wathematica/status/1508077735427866633?cxt=HHwWkoDUnbqt4u0pAAAA"
+                                target="_blank"
+                                rel="noreferrer"
+                                >新歓ゼミ</a
+                            >参加者の2次募集を開始しました。</span
+                        >
+                    </li>
+                    <li class="news newslist__item">
+                        <time class="news__date" datetime="2022-03-29"
+                            >2022年3月29日</time
+                        >
+                        <span class="news__summary"
+                            >3月27日に<a
+                                href="https://twitter.com/wathematica/status/1508077735427866633?cxt=HHwWkoDUnbqt4u0pAAAA"
+                                target="_blank"
+                                rel="noreferrer"
+                                >新歓ゼミ</a
+                            >参加者の募集を開始しました。4月1日まで1次募集を行っています。また、有機化学演習ゼミとb4院試対策進捗報告会の紹介を追加しました。</span
+                        >
+                    </li>
+                    <li class="news newslist__item">
+                        <time class="news__date" datetime="2022-02-16"
+                            >2022年2月16日</time
+                        >
+                        <span class="news__summary"
+                            >群論ゼミの紹介を追加しました。</span
+                        >
+                    </li>
+                    <li class="news newslist__item">
+                        <time class="news__date" datetime="2022-02-10"
+                            >2022年2月10日</time
+                        >
+                        <span class="news__summary"
+                            >Wathematica公式サイトを公開しました。</span
+                        >
+                    </li>
+                </ol>
+            </section>
 
-    <section class="sectionlist__item">
-      <h2>新着情報</h2>
-      <ol class="newslist">
-        <li class="news news list__item">
-          <time class="news__date">2026年5月13日</time>
-          <span class="news__summary">新歓ページを更新しました。</span>
-        </li>
-        <li class="news news list__item">
-          <time class="news__date">2026年5月8日</time>
-          <span class="news__summary">新歓公演について内容を更新しました</span>
-        </li>
-        <li class="news newslist__item">
-          <time class="news__data" datetime="">2026年4月11日</time>
-          <span class="news__summary">ゼミの紹介を更新しました。</span>
-        <li class="news newslist__item">
-          <time class="news__date" datetime="">2026年3月21日</time>
-          <span class="news__summary">新歓講演会の内容を追加しました。</span>
-        </li>
-        <li class="news newslist__item">
-          <time class="news__date" datetime="">2026年3月16日</time>
-          <span class="news__summary">新歓ページの公開を行いました</span>
-        </li>
-        <li class="news newslist__item">
-          <time class="news__date" datetime="">2026年3月2日</time>
-          <span class="news__summary">サイトの改修を行いました</span>
-        </li>
-        <li class="news newslist__item">
-          <time class="news__date" datetime="2025-10-25">2025年10月25日</time>
-          <span class="news__summary">今年度の理工展でポスター展示を行います。詳細は<a href="./events/2025/rikoten.html" target="_blank"
-              rel="noreferrer">こちら</a>。</span>
-        </li>
-        <li class="news newslist__item">
-          <time class="news__date" datetime="2024-05-15">2024年5月15日</time>
-          <span class="news__summary">アクチュアリー数学ゼミ・関数解析ゼミ・ゲージ理論ゼミ・量子力学関数解析ゼミの紹介を追加しました。</span>
-        </li>
-        <li class="news newslist__item">
-          <time class="news__date" datetime="2024-04-01">2024年4月1日</time>
-          <span class="news__summary">3月25日に<a href="https://twitter.com/wathematica/status/1772101139460505966"
-              target="_blank" rel="noreferrer">新歓ゼミ</a>参加者の募集を開始しました。他にも<a
-              href="https://twitter.com/wathematica/status/1774265543991980504">新歓ブース</a>や<a
-              href="https://twitter.com/wathematica/status/1773535745501773844">オンライン説明会</a>などのイベントを予定しています。詳細はリンク先をご覧ください。</span>
-        </li>
-        <li class="news newslist__item">
-          <time class="news__date" datetime="2024-03-18">2024年3月18日</time>
-          <span class="news__summary">3月4日に<a href="https://www.instagram.com/wathematica_waseda" target="_blank"
-              rel="noreferrer">公式Instagram</a>を開設しました。</span>
-        </li>
-        <li class="news newslist__item">
-          <time class="news__date" datetime="2023-07-09">2023年7月9日</time>
-          <span class="news__summary">青雪江ゼミ・代数曲線ゼミ・トゥー多様体ゼミ・蟻本ゼミの紹介を追加しました。</span>
-        </li>
-        <li class="news newslist__item">
-          <time class="news__date" datetime="2023-03-17">2023年3月17日</time>
-          <span class="news__summary"><a
-              href="https://twitter.com/wathematica/status/1508077735427866633?cxt=HHwWkoDUnbqt4u0pAAAA" target="_blank"
-              rel="noreferrer">新歓ゼミ</a>についての告知を行いました。</span>
-        </li>
-        <li class="news newslist__item">
-          <time class="news__date" datetime="2022-04-04">2022年4月4日</time>
-          <span class="news__summary"><a
-              href="https://twitter.com/wathematica/status/1508077735427866633?cxt=HHwWkoDUnbqt4u0pAAAA" target="_blank"
-              rel="noreferrer">新歓ゼミ</a>参加者の2次募集を開始しました。</span>
-        </li>
-        <li class="news newslist__item">
-          <time class="news__date" datetime="2022-03-29">2022年3月29日</time>
-          <span class="news__summary">3月27日に<a
-              href="https://twitter.com/wathematica/status/1508077735427866633?cxt=HHwWkoDUnbqt4u0pAAAA" target="_blank"
-              rel="noreferrer">新歓ゼミ</a>参加者の募集を開始しました。4月1日まで1次募集を行っています。また、有機化学演習ゼミとb4院試対策進捗報告会の紹介を追加しました。</span>
-        </li>
-        <li class="news newslist__item">
-          <time class="news__date" datetime="2022-02-16">2022年2月16日</time>
-          <span class="news__summary">群論ゼミの紹介を追加しました。</span>
-        </li>
-        <li class="news newslist__item">
-          <time class="news__date" datetime="2022-02-10">2022年2月10日</time>
-          <span class="news__summary">Wathematica公式サイトを公開しました。</span>
-        </li>
-      </ol>
-    </section>
-
-    <section id="contact" class="section sectionlist__item">
-      <h2>お問合せ</h2>
-      <address>
-        <p>ご連絡はメール、もしくは<a href="https://twitter.com/wathematica" target="_blank"
-            rel="noopener noreferrer">X（旧Twitter）</a>、<a href="https://www.instagram.com/wathematica_waseda"
-            target="_blank" rel="noreferrer">インスタグラム</a>のダイレクトメッセージにお願いいたします。</p>
-        <p>メールアドレスはwathematica<wbr>☆<wbr>gmail<wbr>.comです。<wbr>☆<wbr>を<wbr>@<wbr>に変更してください。</p>
-        <p>入会を希望する方は<a href="./join.html">こちらのページ</a>をご参照ください</p>
-      </address>
-    </section>
-  </main>
-  <footer class="footer page__footer">
-    <ul class="snslist footer__snslist">
-      <li class="snslist__item">
-        <a href="https://twitter.com/wathematica" target="_blank" rel="noreferrer">
-          <img class="snsicon" src="./figure/x.svg" alt="X (Twitter)">
-        </a>
-      </li>
-      <li class="snslist__item">
-        <a href="https://www.instagram.com/wathematica_waseda" target="_blank" rel="noreferrer">
-          <img class="snsicon" src="./figure/instagram.svg" alt="Instagram">
-        </a>
-      </li>
-    </ul>
-    <small class="footer__copyright">© 2022 Wathematica</small>
-  </footer>
-</body>
-
+            <section id="contact" class="section sectionlist__item">
+                <h2>お問合せ</h2>
+                <address>
+                    <p>
+                        ご連絡はメール、もしくは<a
+                            href="https://twitter.com/wathematica"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >X（旧Twitter）</a
+                        >、<a
+                            href="https://www.instagram.com/wathematica_waseda"
+                            target="_blank"
+                            rel="noreferrer"
+                            >インスタグラム</a
+                        >のダイレクトメッセージにお願いいたします。
+                    </p>
+                    <p>
+                        メールアドレスはwathematica<wbr />☆<wbr />gmail<wbr />.comです。<wbr />☆<wbr />を<wbr />@<wbr />に変更してください。
+                    </p>
+                    <p>
+                        入会を希望する方は<a href="./join.html"
+                            >こちらのページ</a
+                        >をご参照ください
+                    </p>
+                </address>
+            </section>
+        </main>
+        <footer class="footer page__footer">
+            <ul class="snslist footer__snslist">
+                <li class="snslist__item">
+                    <a
+                        href="https://twitter.com/wathematica"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <img
+                            class="snsicon"
+                            src="./figure/x.svg"
+                            alt="X (Twitter)"
+                        />
+                    </a>
+                </li>
+                <li class="snslist__item">
+                    <a
+                        href="https://www.instagram.com/wathematica_waseda"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <img
+                            class="snsicon"
+                            src="./figure/instagram.svg"
+                            alt="Instagram"
+                        />
+                    </a>
+                </li>
+            </ul>
+            <small class="footer__copyright">© 2022 Wathematica</small>
+        </footer>
+    </body>
 </html>

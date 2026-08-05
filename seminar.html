@@ -1,383 +1,525 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja" prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta
+            name="description"
+            content="理工系学術サークル「Wathematica」のゼミ紹介です。"
+        />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@wathematica" />
+        <meta property="og:title" content="ゼミ紹介 | Wathematica" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://wathematica.github.io/" />
+        <meta
+            property="og:image"
+            content="https://wathematica.github.io/figure/ogp.png"
+        />
+        <meta
+            property="og:description"
+            content="理工系学術サークル「Wathematica」のゼミ紹介です。"
+        />
+        <title>ゼミ紹介 | Wathematica</title>
+        <link rel="icon" href="/favicon.png" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./ress.css" />
+        <link rel="stylesheet" href="./common.css" />
+        <link rel="stylesheet" href="./seminar.css" />
+        <script defer src="./index.js"></script>
+        <script defer src="./seminar.js"></script>
+    </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="理工系学術サークル「Wathematica」のゼミ紹介です。">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@wathematica">
-  <meta property="og:title" content="ゼミ紹介 | Wathematica">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://wathematica.github.io/">
-  <meta property="og:image" content="https://wathematica.github.io/figure/ogp.png">
-  <meta property="og:description" content="理工系学術サークル「Wathematica」のゼミ紹介です。">
-  <title>ゼミ紹介 | Wathematica</title>
-  <link rel="icon" href="/favicon.png">
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./ress.css">
-  <link rel="stylesheet" href="./common.css">
-  <link rel="stylesheet" href="./seminar.css">
-  <script defer src="./index.js"></script>
-  <script defer src="./seminar.js"></script>
-</head>
+    <body>
+        <header class="header page__header">
+            <h1 class="header__title">
+                <a href="/index.html">
+                    <img
+                        class="header__logo"
+                        src="./figure/logo.svg"
+                        alt="Wathematica"
+                        width="250"
+                        height="32"
+                    />
+                </a>
+            </h1>
+            <button class="hamburger" aria-label="メニューを開く">
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+            </button>
+            <nav class="header__navigation">
+                <ul class="navigation">
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="/index.html">Home</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="/index.html#seminar"
+                            >Seminar</a
+                        >
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="./events.html"
+                            >Events</a
+                        >
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="./join.html">Join</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="/Q&A.html">Q&A</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="page__content">
+            <h2>ゼミ紹介</h2>
+            <p>
+                このページでは、活動中のゼミを掲載しています。<a
+                    href="./closed.html"
+                    >過去に行われていたゼミはこちらからご覧ください</a
+                >。
+            </p>
+            <section>
+                <h3 class="section-title">数学</h3>
+                <div class="seminar-grid">
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">tu多様体ゼミ</h4>
+                        <p class="seminar-card__description"></p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">
+                            春だ！桜だ！導来圏だ！ゼミ
+                        </h4>
+                        <p class="seminar-card__description"></p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">数理最適化ゼミ</h4>
+                        <p class="seminar-card__description"></p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">青雪絵ゼミ</h4>
+                        <p class="seminar-card__description"></p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">群論ゼミ</h4>
+                        <p class="seminar-card__description"></p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">符号付き測度ゼミ</h4>
+                        <p class="seminar-card__description"></p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">微分積分1</h4>
+                        <p class="seminar-card__description"></p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">
+                            シンプレクティック幾何学
+                        </h4>
+                        <p class="seminar-card__description"></p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">集合位相ゼミ</h4>
+                        <p class="seminar-card__description">
+                            集合と位相について輪読で学ぶ
+                        </p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">線形代数-斉藤</h4>
+                        <p class="seminar-card__description">
+                            斎藤正彦の線形代数入門を用いてがんばります
+                        </p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">エバンスゼミ</h4>
+                        <p class="seminar-card__description"></p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">複素関数論の基礎</h4>
+                        <p class="seminar-card__description">
+                            複素関数論の基礎について学ぶ。種々の複素関数と微積、べき級数、留数定理まで扱う。
+                        </p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">orbifoldゼミ</h4>
+                        <p class="seminar-card__description">
+                            Orbifoldの基本的なことを学びます。
+                        </p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">確率微分方程式ゼミ</h4>
+                        <p class="seminar-card__description">
+                            確率微分方程式について、谷口説男先生の確率微分方程式をもとに学んでいきます。望ましい予備知識の項で書いたことについては前提として進めたいです。ただ、望ましい予備知識の項以外の知識については配慮していきます
+                        </p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">岩波数論ゼミ</h4>
+                        <p class="seminar-card__description">
+                            数論の話題に触れる
+                        </p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">情報幾何ゼミ</h4>
+                        <p class="seminar-card__description">
+                            多様体や微分幾何に浅く触れながら情報幾何学について学びます
+                        </p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">数理統計ゼミ</h4>
+                        <p class="seminar-card__description">
+                            アクチュアリーや統計検定1級レベルの統計力を見につけよう!!
+                        </p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">
+                            多様体上のソボレフ空間ゼミ
+                        </h4>
+                        <p class="seminar-card__description">
+                            Riemann多様体上のSobolev空間の一般論をやります．
+                        </p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">hausdorff測度ゼミ</h4>
+                        <p class="seminar-card__description">
+                            Hausdorff測度について学びます。
+                        </p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">gagaゼミ</h4>
+                        <p class="seminar-card__description">
+                            複素数体上の代数幾何学と解析幾何学の繋がりをみる
+                        </p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">brezis演習ゼミ</h4>
+                        <p class="seminar-card__description">
+                            Brezisの演習問題を解いて関数解析への造詣を深めることを目的としています。
+                            Brezisは演習問題を参照にすることが多いので、演習問題を解くことで更なる理解ができると考えています。
+                        </p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">指数定理ゼミ</h4>
+                        <p class="seminar-card__description">
+                            K理論によるAtiyah-Singerの指数定理の証明を理解する
+                        </p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">特性類ゼミ</h4>
+                        <p class="seminar-card__description">
+                            特性類の基礎について学ぶ
+                        </p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">関数解析演習ゼミ</h4>
+                        <p class="seminar-card__description"></p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">舟木確率微分方程式</h4>
+                        <p class="seminar-card__description">
+                            確率微分方程式を理解する
+                        </p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">𝒟加群ゼミ</h4>
+                        <p class="seminar-card__description"></p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">様相論理ゼミ</h4>
+                        <p class="seminar-card__description">
+                            様相論理のすべてを理解する。正規様相論理の基礎（構文論・意味論・完全性）から、ゲーデルの不完全性定理と関連する証明可能性論理、
+                            そして集合論における強制法とそれに基づく強制様相論理までを体系的に学びます。
+                        </p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">関数解析ゼミ</h4>
+                        <p class="seminar-card__description"></p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">
+                            楕円型偏微分作用素ゼミ
+                        </h4>
+                        <p class="seminar-card__description"></p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">代数幾何学ゼミ</h4>
+                        <p class="seminar-card__description"></p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">代トポゼミ</h4>
+                        <p class="seminar-card__description"></p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">アティマクゼミ</h4>
+                        <p class="seminar-card__description"></p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">層ホモゼミ</h4>
+                        <p class="seminar-card__description"></p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">今野微分幾何学ゼミ</h4>
+                        <p class="seminar-card__description">
+                            今野微分幾何の本を読みます。すでにチャンネルは立っています。
+                        </p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">作用素環論ゼミ</h4>
+                        <p class="seminar-card__description"></p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">中トポゼミ</h4>
+                        <p class="seminar-card__description"></p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">岩澤理論ゼミ</h4>
+                        <p class="seminar-card__description"></p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">orlicz空間ゼミ</h4>
+                        <p class="seminar-card__description"></p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">解析入門ゼミ</h4>
+                        <p class="seminar-card__description"></p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">代数的整数論</h4>
+                        <p class="seminar-card__description">
+                            代数的整数論について勉強します
+                        </p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">類体論</h4>
+                        <p class="seminar-card__description">
+                            類体論について学びます．
+                        </p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">保型形式</h4>
+                        <p class="seminar-card__description"></p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">
+                            線形代数と固有値問題ゼミ
+                        </h4>
+                        <p class="seminar-card__description"></p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">嘉田数理論理学ゼミ</h4>
+                        <p class="seminar-card__description"></p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">リーマン面ゼミ</h4>
+                        <p class="seminar-card__description"></p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">bott-tuゼミ</h4>
+                        <p class="seminar-card__description"></p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">確率過程ゼミ</h4>
+                        <p class="seminar-card__description">
+                            確率過程に入門し、伊藤の公式を理解したい
+                        </p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">
+                            植田シンプレクティック幾何ゼミ
+                        </h4>
+                        <p class="seminar-card__description">
+                            植田一石『数物系のためのシンプレクティック幾何学入門』を読みます。
+                        </p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">強制法ゼミ</h4>
+                        <p class="seminar-card__description">
+                            kunen　独立性証明の案内を読みます。
+                        </p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">統計学ゼミ</h4>
+                        <p class="seminar-card__description">
+                            アクチュアリー試験の勉強中なので一緒に統計学勉強してくれる人募集です
+                        </p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">
+                            シルバーマン楕円曲線ゼミ
+                        </h4>
+                        <p class="seminar-card__description">
+                            楕円曲線について基礎から学ぶ
+                        </p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">リーマン幾何ゼミ</h4>
+                        <p class="seminar-card__description"></p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">赤雪絵ゼミ</h4>
+                        <p class="seminar-card__description"></p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">リー群と表現論ゼミ</h4>
+                        <p class="seminar-card__description"></p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">小林ゲージゼミ</h4>
+                        <p class="seminar-card__description">
+                            接続の微分幾何とゲージ理論について入門し理解を深める
+                        </p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">杉浦解析ゼミ</h4>
+                        <p class="seminar-card__description"></p>
+                    </article>
+                </div>
+            </section>
 
-<body>
-  <header class="header page__header">
-    <h1 class="header__title">
-      <a href="/index.html">
-        <img class="header__logo" src="./figure/logo.svg" alt="Wathematica" width="250" height="32">
-      </a>
-    </h1>
-    <button class="hamburger" aria-label="メニューを開く">
-      <span class="hamburger__line"></span>
-      <span class="hamburger__line"></span>
-      <span class="hamburger__line"></span>
-    </button>
-    <nav class="header__navigation">
-      <ul class="navigation">
-        <li class="navigation__item">
-          <a class="navigation__link" href="/index.html">Home</a>
-        </li>
-        <li class="navigation__item">
-          <a class="navigation__link" href="/index.html#seminar">Seminar</a>
-        </li>
-        <li class="navigation__item">
-          <a class="navigation__link" href="./events.html">Events</a>
-        </li>
-        <li class="navigation__item">
-          <a class="navigation__link" href="./join.html">Join</a>
-        </li>
-        <li class="navigation__item">
-          <a class="navigation__link" href="/Q&A.html">Q&A</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-  <main class="page__content">
-    <h2>ゼミ紹介</h2>
-    <p>このページでは、活動中のゼミを掲載しています。<a href="./closed.html">過去に行われていたゼミはこちらからご覧ください</a>。</p>
-    <section>
-      <h3 class="section-title">数学</h3>
-      <div class="seminar-grid">
-        <article class="seminar-card">
-          <h4 class="seminar-card__name">ソボレフ空間ゼミ</h4>
-          <p class="seminar-card__description">ソボレフ空間の全てを知るため、辞書的な本を読みたい。</p>
-        </article>
-        <article class="seminar-card">
-          <h4 class="seminar-card__name">東大数理専門科目a演習ゼミ</h4>
-          <p class="seminar-card__description">
-            東大数理専門科目Ａの過去問を用い，院試レベルの問題に対する理解と精密な議論の力を養うことを目的とする演習ゼミ。試験対策というより形式や難易度の把握と論証力の向上を重視する。時間制限を設けずに問題に取り組み，一週間に一回集まって前回決定した問題の解説を行う。参加者は不明点や不十分な議論を指摘し合い，議論を深める。主に新三年生を想定するが他学年も歓迎する。
-          </p>
-        </article>
-        <article class="seminar-card">
-          <h4 class="seminar-card__name">小平複素解析ゼミ</h4>
-          <p class="seminar-card__description">
-            小平先生の複素解析の本を読みます。第三章あるいは第四章から読み始める予定です。章のタイトルは三章から順に次の通りです：等角写像、解析接続、Riemannの写像定理、Riemann面、Riemann面の構造、閉Riemann面上の解析関数。
-          </p>
-        </article>
-        <article class="seminar-card">
-          <h4 class="seminar-card__name">永井代数の体論ゼミ</h4>
-          <p class="seminar-card__description">
-            永井代数の第二章までを飛ばして、第三章（体）をやります。ガロワ理論の初歩について概観します。
-          </p>
-        </article>
-        <article class="seminar-card">
-          <h4 class="seminar-card__name">春だ！桜だ！導来圏だ！ゼミ</h4>
-          <p class="seminar-card__description">
-          </p>
-        </article>
-        <article class="seminar-card">
-          <h4 class="seminar-card__name">𝒟加群ゼミ</h4>
-          <p class="seminar-card__description">
-          </p>
-        </article>
-        <article class="seminar-card">
-          <h4 class="seminar-card__name">線形代数と固有値問題ゼミ</h4>
-          <p class="seminar-card__description">
-            固有値問題を詳しく勉強したいです
-          </p>
-        </article>
-        <article class="seminar-card">
-          <h4 class="seminar-card__name">嘉田数理論理学ゼミ</h4>
-          <p class="seminar-card__description">
-            嘉田『数理論理学』を読みたいです。新井基礎論ゼミがすでにありますがそれよりももっと初歩的なことをやりたいです。
-          </p>
-        </article>
-        <article class="seminar-card">
-          <h4 class="seminar-card__name">シルバーマン楕円曲線ゼミ</h4>
-          <p class="seminar-card__description">
-            楕円曲線について基礎から学ぶ
-          </p>
-        </article>
-        <article class="seminar-card">
-          <h4 class="seminar-card__name">数理最適化ゼミ</h4>
-          <p class="seminar-card__description">
-          </p>
-        </article>
-        <article class="seminar-card">
-          <h4 class="seminar-card__name">カラビ・ヤウ多様体ゼミ</h4>
-          <p class="seminar-card__description">
-            カラビ・ヤウ多様体の基本的なことを学びます。著者が3人いて、それぞれ別の内容を扱っていますが、提案者はその全てに興味があるため初めから順番に読んでいきたいです。内容はホロノミー群・Calibrated Geometry、ミラー対称性、コンパクトハイパーケーラー多様体です。
-          </p>
-        </article>
-        <article class="seminar-card">
-          <h4 class="seminar-card__name">bott-tuゼミ</h4>
-          <p class="seminar-card__description">
-          </p>
-        </article>
-        <article class="seminar-card">
-          <h4 class="seminar-card__name">様相論理ゼミ</h4>
-          <p class="seminar-card__description">
-            様相論理のすべてを理解する。正規様相論理の基礎（構文論・意味論・完全性）から、ゲーデルの不完全性定理と関連する証明可能性論理、そして集合論における強制法とそれに基づく強制様相論理までを体系的に学びます。
-          </p>
-        </article>
-        <article class="seminar-card">
-          <h4 class="seminar-card__name">関数解析ゼミ</h4>
-          <p class="seminar-card__description">関数解析をします。</p>
-        </article>
-        <article class="seminar-card">
-          <h4 class="seminar-card__name">代数幾何学ゼミ</h4>
-          <p class="seminar-card__description">
-          </p>
-        </article>
-        <article class="seminar-card">
-          <h4 class="seminar-card__name">代トポゼミ</h4>
-          <p class="seminar-card__description">
-          </p>
-        </article>
-        <article class="seminar-card">
-          <h4 class="seminar-card__name">アティマクゼミ</h4>
-          <p class="seminar-card__description">
-          </p>
-        </article>
-        <article class="seminar-card">
-          <h4 class="seminar-card__name">公理的集合論ゼミ</h4>
-          <p class="seminar-card__description">
-          </p>
-        </article>
-        <article class="seminar-card">
-          <h4 class="seminar-card__name">層ホモゼミ</h4>
-          <p class="seminar-card__description">
-          </p>
-        </article>
-        <article class="seminar-card">
-          <h4 class="seminar-card__name">表現論と戯れようゼミ</h4>
-          <p class="seminar-card__description">
-            表現論(群、Lie群、Lie代数、箙など)の本をゆーぐまが書きたいので、取り敢えず表現論に関して小噺や問題をいろいろ適当に喋ります
-          </p>
-        </article>
-        <article class="seminar-card">
-          <h4 class="seminar-card__name">今野微分幾何ゼミ</h4>
-          <p class="seminar-card__description">
-          </p>
-        </article>
-        <article class="seminar-card">
-          <h4 class="seminar-card__name">戸松作用素環論ゼミ</h4>
-          <p class="seminar-card__description">
-          </p>
-        </article>
-        <article class="seminar-card">
-          <h4 class="seminar-card__name">新井基礎論ゼミ</h4>
-          <p class="seminar-card__description">
-            新井敏康の数学基礎論を読みます。基礎論のすべて（モデル理論、計算理論、集合論、証明論）を勉強します。
-          </p>
-        </article>
-        <article class="seminar-card">
-          <h4 class="seminar-card__name">中トポゼミ</h4>
-          <p class="seminar-card__description">
-            理論物理学で必要な幾何学を勉強する。物理のゲージ理論を数学の言葉で理解することを目標とする。中トポの13章(ゲージ場理論におけるアノマリー)を目標に5章から7.8章は飛ばして読む(5,6,9,10,11,12,13の順)予定(飛ばしているところが必要そうだったら臨機応変に)。長い本なので2コマ連続など長めにやりたいです。
-          </p>
-        </article>
-        <article class="seminar-card">
-          <h4 class="seminar-card__name">岩澤理論ゼミ</h4>
-          <p class="seminar-card__description">
-          </p>
-        </article>
-        <article class="seminar-card">
-          <h4 class="seminar-card__name">orlicz空間ゼミ</h4>
-          <p class="seminar-card__description">
-            ルベーグのL^p空間の一般化から解析学への新たな可能性を探る
-          </p>
-        </article>
-        <article class="seminar-card">
-          <h4 class="seminar-card__name">ベクトル解析ゼミ</h4>
-          <p class="seminar-card__description">
-          </p>
-        </article>
-        <article class="seminar-card">
-          <h4 class="seminar-card__name">解析入門1</h4>
-          <p class="seminar-card__description">
-            解析学を勉強します。数学的に厳密な議論を構築できるようになることを目指すとともに、微積分学や複素解析などの分野に分かれて勉強してきたことをより広い文脈で捉えられるようになることを目指してます。
-          </p>
-        </article>
-        <article class="seminar-card">
-          <h4 class="seminar-card__name">代数的整数論</h4>
-          <p class="seminar-card__description">
-            代数的整数論について勉強します．
-          </p>
-        </article>
-        <article class="seminar-card">
-          <h4 class="seminar-card__name">超関数論ゼミ</h4>
-          <p class="seminar-card__description">
-            超関数とFourier変換について学ぶことを主眼とします。超関数論ゼミという名前にしましたが、前半は関数解析で、後半が超関数とFourier変換になります。関数解析パートは線型位相空間についても記載があるので、そちらに関心がある方も歓迎です。
-          </p>
-        </article>
-        <article class="seminar-card">
-          <h4 class="seminar-card__name">舟木確率論ゼミ</h4>
-          <p class="seminar-card__description">
-            測度論に基づく確率論の勉強をします！確率過程も扱います！
-          </p>
-        </article>
-        <article class="seminar-card">
-          <h4 class="seminar-card__name">類体論</h4>
-          <p class="seminar-card__description">
-            類体論について学びます．
-          </p>
-        </article>
-        <article class="seminar-card">
-          <h4 class="seminar-card__name">保型形式</h4>
-          <p class="seminar-card__description">
-            保型形式の数論的側面(+できれば表現論的側面)を学ぶ
-          </p>
-        </article>
-        <article class="seminar-card">
-          <h4 class="seminar-card__name">リーマン面をめざ層ゼミ</h4>
-          <p class="seminar-card__description">
-          </p>
-        </article>
-        <article class="seminar-card">
-          <h4 class="seminar-card__name">確率過程ゼミ</h4>
-          <p class="seminar-card__description">
-            確率過程に入門し、伊藤の公式を理解したい
-          </p>
-        </article>
-      </div>
-    </section>
+            <section>
+                <h3 class="section-title">物理</h3>
+                <div class="seminar-grid">
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">内山相対論</h4>
+                        <p class="seminar-card__description"></p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">清水量子論</h4>
+                        <p class="seminar-card__description"></p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">原子力概論</h4>
+                        <p class="seminar-card__description"></p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">振動と波動ゼミ</h4>
+                        <p class="seminar-card__description"></p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">共形場理論ゼミ</h4>
+                        <p class="seminar-card__description"></p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">九後ゲージゼミ</h4>
+                        <p class="seminar-card__description"></p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">jj_sakurai</h4>
+                        <p class="seminar-card__description"></p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">山本解析力学</h4>
+                        <p class="seminar-card__description"></p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">peskinゼミ</h4>
+                        <p class="seminar-card__description"></p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">相対論ゼミ</h4>
+                        <p class="seminar-card__description"></p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">砂川電磁気</h4>
+                        <p class="seminar-card__description"></p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">連続体の力学ゼミ</h4>
+                        <p class="seminar-card__description">
+                            弾性体力学と流体力学を一撃で修めましょう
+                        </p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">物テキ電磁気ゼミ</h4>
+                        <p class="seminar-card__description"></p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">弦ブレゼミ</h4>
+                        <p class="seminar-card__description">
+                            (超)弦理論の基本的な話題を攫いたいです
+                        </p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">costelloゼミ</h4>
+                        <p class="seminar-card__description">
+                            K.
+                            Costelloによる摂動的場の量子論の定式化を学ぶ。提案者の数学的準備が明らかに不十分なので、全体知識も確認しながらゆっくり進めたいです。
+                        </p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">田崎じゃん負けゼミ</h4>
+                        <p class="seminar-card__description"></p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">田崎熱力学ゼミ</h4>
+                        <p class="seminar-card__description"></p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">田崎統計力学ゼミ</h4>
+                        <p class="seminar-card__description"></p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">巽流体力学ゼミ</h4>
+                        <p class="seminar-card__description"></p>
+                    </article>
+                </div>
+            </section>
 
-    <section>
-      <h3 class="section-title">物理</h3>
-      <div class="seminar-grid">
-        <article class="seminar-card">
-          <h4 class="seminar-card__name">非エルミート量子力学ゼミ</h4>
-          <p class="seminar-card__description">
-          </p>
-        </article>
-        <article class="seminar-card">
-          <h4 class="seminar-card__name">巽流体力学ゼミ</h4>
-          <p class="seminar-card__description">
-            ゆっくり流体力学を勉強します。金曜3限でやりたいです。
-          </p>
-        </article>
-        <article class="seminar-card">
-          <h4 class="seminar-card__name">共形場理論ゼミ</h4>
-          <p class="seminar-card__description">
-            素粒子や宇宙、物性に広く関わっている共形場理論について基礎的なことから学ぶ。主に2次元CFTに関心があり、春学期から始めたい。
-          </p>
-        </article>
-        <article class="seminar-card">
-          <h4 class="seminar-card__name">九後ゲージゼミ</h4>
-          <p class="seminar-card__description">
-          </p>
-        </article>
-        <article class="seminar-card">
-          <h4 class="seminar-card__name">宇宙論ゼミ</h4>
-          <p class="seminar-card__description">
-            インフレーション、宇宙背景輻射等を扱いたいです。宇宙論の概要をあまり知らないのでやりたい範囲があれば一緒に扱いたいです。
-          </p>
-        </article>
-        <article class="seminar-card">
-          <h4 class="seminar-card__name">jj_sakurai</h4>
-          <p class="seminar-card__description">
-            jjサクライ量子力学を読みます。
-          </p>
-        </article>
-        <article class="seminar-card">
-          <h4 class="seminar-card__name">山本解析力学</h4>
-          <p class="seminar-card__description">
-            解析力学を勉強します。教科書の特徴として、数学的準備から入ることと、例題が豊富にあることが挙げられます。数学の扱いに習熟することも、読み進めていく中での目標の一つになると思われます。
-          </p>
-        </article>
-        <article class="seminar-card">
-          <h4 class="seminar-card__name">田崎統計力学</h4>
-          <p class="seminar-card__description">
-          </p>
-        </article>
-        <article class="seminar-card">
-          <h4 class="seminar-card__name">量子力学</h4>
-          <p class="seminar-card__description">
-          </p>
-        </article>
-        <article class="seminar-card">
-          <h4 class="seminar-card__name">相対論ゼミ</h4>
-          <p class="seminar-card__description">
-          </p>
-        </article>
-        <article class="seminar-card">
-          <h4 class="seminar-card__name">砂川電磁気</h4>
-          <p class="seminar-card__description">
-          </p>
-        </article>
-        <article class="seminar-card">
-          <h4 class="seminar-card__name">連続体の力学ゼミ</h4>
-          <p class="seminar-card__description">
-            弾性体力学と流体力学を一撃で修めましょう
-          </p>
-        </article>
-        <article class="seminar-card">
-          <h4 class="seminar-card__name">物テキ電磁気ゼミ</h4>
-          <p class="seminar-card__description">
-          </p>
-        </article>
-        <article class="seminar-card">
-          <h4 class="seminar-card__name">弦ブレゼミ</h4>
-          <p class="seminar-card__description">
-            (超)弦理論の基本的な話題を攫いたいです
-          </p>
-        </article>
-        <article class="seminar-card">
-          <h4 class="seminar-card__name">costelloゼミ</h4>
-          <p class="seminar-card__description">
-            K. Costelloによる摂動的場の量子論の定式化を学ぶ。提案者の数学的準備が明らかに不十分なので、全体知識も確認しながらゆっくり進めたいです。
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section>
-      <h3 class="section-title">その他</h3>
-      <div class="seminar-grid">
-        <article class="seminar-card">
-          <h4 class="seminar-card__name">対称性と機械学習ゼミ</h4>
-          <p class="seminar-card__description">機械学習において対称性がどのような意味を持つかを理解する</p>
-        </article>
-        <article class="seminar-card">
-          <h4 class="seminar-card__name">量子化学ゼミ</h4>
-          <p class="seminar-card__description">
-          </p>
-        </article>
-      </div>
-    </section>
-  </main>
-  <footer class="footer page__footer">
-    <ul class="snslist footer__snslist">
-      <li class="snslist__item">
-        <a href="https://twitter.com/wathematica" target="_blank" rel="noreferrer">
-          <img class="snsicon" src="./figure/x.svg" alt="X (Twitter)">
-        </a>
-      </li>
-      <li class="snslist__item">
-        <a href="https://www.instagram.com/wathematica_waseda" target="_blank" rel="noreferrer">
-          <img class="snsicon" src="./figure/instagram.svg" alt="Instagram">
-        </a>
-      </li>
-    </ul>
-    <small class="footer__copyright">© 2022 Wathematica</small>
-  </footer>
-</body>
-
+            <section>
+                <h3 class="section-title">その他</h3>
+                <div class="seminar-grid">
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">有機金属ゼミ</h4>
+                        <p class="seminar-card__description"></p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">有機化学ゼミ</h4>
+                        <p class="seminar-card__description"></p>
+                    </article>
+                    <article class="seminar-card">
+                        <h4 class="seminar-card__name">量子化学ゼミ</h4>
+                        <p class="seminar-card__description"></p>
+                    </article>
+                </div>
+            </section>
+        </main>
+        <footer class="footer page__footer">
+            <ul class="snslist footer__snslist">
+                <li class="snslist__item">
+                    <a
+                        href="https://twitter.com/wathematica"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <img
+                            class="snsicon"
+                            src="./figure/x.svg"
+                            alt="X (Twitter)"
+                        />
+                    </a>
+                </li>
+                <li class="snslist__item">
+                    <a
+                        href="https://www.instagram.com/wathematica_waseda"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <img
+                            class="snsicon"
+                            src="./figure/instagram.svg"
+                            alt="Instagram"
+                        />
+                    </a>
+                </li>
+            </ul>
+            <small class="footer__copyright">© 2022 Wathematica</small>
+        </footer>
+    </body>
 </html>
