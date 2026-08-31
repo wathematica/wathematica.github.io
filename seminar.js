@@ -2,32 +2,37 @@
   "use strict";
 
   window.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll(".seminar-card").forEach((card) => {
-      if (card.scrollHeight > 200) {
-        const btn = document.createElement("button");
-        btn.className = "seminar-card__toggle";
-        btn.textContent = "もっと見る";
-        btn.addEventListener("click", () => {
-          if (card.classList.contains("is-expanded")) {
-            card.style.maxHeight = card.scrollHeight + "px";
-            requestAnimationFrame(() => {
-              card.style.maxHeight = "200px";
-            });
-            card.classList.remove("is-expanded");
-            btn.textContent = "もっと見る";
-          } else {
-            card.style.maxHeight = card.scrollHeight + "px";
-            card.classList.add("is-expanded");
-            btn.textContent = "閉じる";
-            card.addEventListener("transitionend", () => {
-              if (card.classList.contains("is-expanded")) {
-                card.style.maxHeight = "none";
-              }
-            }, { once: true });
-          }
-        });
-        card.appendChild(btn);
+    document.querySelectorAll(".seminar-item").forEach((item, index) => {
+      const name = item.querySelector(".seminar-item__name");
+      const description = item.querySelector(".seminar-item__description");
+
+      if (!name || !description) {
+        return;
       }
+
+      if (!description.textContent.trim()) {
+        description.textContent = "紹介文は準備中です。";
+      }
+
+      const button = document.createElement("button");
+      const descriptionId = `seminar-description-${index + 1}`;
+
+      button.className = "seminar-item__toggle";
+      button.type = "button";
+      button.setAttribute("aria-expanded", "false");
+      button.setAttribute("aria-controls", descriptionId);
+      button.append(...name.childNodes);
+
+      name.appendChild(button);
+      description.id = descriptionId;
+      description.hidden = true;
+
+      button.addEventListener("click", () => {
+        const isExpanded = button.getAttribute("aria-expanded") === "true";
+
+        button.setAttribute("aria-expanded", String(!isExpanded));
+        description.hidden = isExpanded;
+      });
     });
   });
 })();
