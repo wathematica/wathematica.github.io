@@ -1,5 +1,78 @@
 /* 告知 */
 
+.rikoten-banner {
+  background: #f3efe6;
+  border-bottom: 1px solid #ddd5c6;
+}
+
+.rikoten-banner__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 88%;
+  max-width: 1100px;
+  min-height: 80px;
+  margin: 0 auto;
+  padding: 18px 0;
+  color: #111;
+  text-decoration: none;
+}
+
+.rikoten-banner__content {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+}
+
+.rikoten-banner__label {
+  padding: 3px 12px;
+  background: #111;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.rikoten-banner__title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.rikoten-banner__arrow {
+  display: grid;
+  place-items: center;
+  flex: 0 0 36px;
+  height: 36px;
+  border: 1px solid #111;
+  border-radius: 50%;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.rikoten-banner__link:hover .rikoten-banner__arrow {
+  transform: translateX(4px);
+  background: #111;
+  color: #fff;
+}
+
+.rikoten-banner__link:focus-visible {
+  outline: 2px solid #111;
+  outline-offset: -2px;
+}
+
+@media (max-width: 600px) {
+  .rikoten-banner__link { gap: 12px; padding: 14px 0; }
+  .rikoten-banner__content { align-items: flex-start; flex-direction: column; gap: 6px; }
+  .rikoten-banner__title { font-size: 0.95rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rikoten-banner__arrow { transition: none; }
+  .rikoten-banner__link:hover .rikoten-banner__arrow { transform: none; }
+}
+
 .announcement {
   background: rgba(255, 255, 255, 0.85);
   line-height: 1.6;
@@ -133,27 +206,52 @@
 .newslist {
   border: solid 1px var(--separator-color);
   list-style: none;
-  max-height: 200px;
+  max-height: 320px;
   overflow-y: auto;
+  padding: 0;
+  scrollbar-gutter: stable;
 }
 
 .newslist__item {
-  margin: 0.5em;
+  display: grid;
+  grid-template-columns: 9rem minmax(0, 1fr);
+  align-items: start;
+  gap: 0.5rem 1.5rem;
+  margin: 0;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--separator-color);
 }
 
-.news {
-  padding-left: 1em;
+.newslist__item:last-child {
+  border-bottom: 0;
 }
 
 .news__date {
-  display: inline-block;
-  margin-right: 1em;
-  text-indent: -1em;
+  display: block;
+  color: #666;
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
 }
 
 .news__summary {
-  display: inline;
-  word-break: break-all;
+  display: block;
+  min-width: 0;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+.news__summary a {
+  text-underline-offset: 0.2em;
+}
+
+@media (max-width: 600px) {
+  .newslist__item {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.3rem;
+    padding: 0.9rem 1rem;
+  }
 }
 
 /* ゼミ集 */
