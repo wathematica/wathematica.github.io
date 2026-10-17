@@ -12,7 +12,7 @@ window.rikotenData = {
       "id": "poincare",
       "title": "ユークリッドの第五公準とPoincaré上半平面モデル",
       "category": "数学",
-      "description": "",
+      "description": "高校までで扱っていた幾何は平行線に関するユークリッドの第五公準を認めたユークリッド幾何上で行われていました。本ポスターではユークリッドの第五公準を紹介した上でそれが成り立たないような幾何モデルを紹介します。",
       "image": "./assets/posters/poincare-1.webp",
       "pdf": "./poster/【理工展ポスター】宮坂明宏_ユークリッドの第五公準とPoincaré上半平面モデル.pdf",
       "sample": false,
