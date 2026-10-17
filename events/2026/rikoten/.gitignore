@@ -1,0 +1,3 @@
+# Unpublished PDFs and poster previews must not be committed or served by Jekyll.
+_private/
+__pycache__/
